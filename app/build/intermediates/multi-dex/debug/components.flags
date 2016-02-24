@@ -1,0 +1,26 @@
+-injars /media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/build/intermediates/transforms/jarMerging/debug/jars/1/1f/combined.jar
+-outjars /media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/build/intermediates/multi-dex/debug/componentClasses.jar
+
+-libraryjars /home/vladimir/android-sdk-linux/build-tools/23.0.2/lib/shrinkedAndroid.jar
+
+-forceprocessing
+-dontoptimize
+-dontobfuscate
+-dontusemixedcaseclassnames
+-dontpreverify
+-dontwarn
+-printconfiguration /media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/build/intermediates/multi-dex/debug/components.flags
+
+
+-keep class com.example.vladimir.uzbekistanexplorer.MainActivity {
+    <init>();
+}
+
+-keep public class * extends android.app.backup.BackupAgent {
+    <init>();
+}
+
+-keep public class * extends java.lang.annotation.Annotation {
+    <fields>;
+    <methods>;
+}
