@@ -10,7 +10,6 @@ import java.util.List;
 public class ContentPagerAdapter extends FragmentStatePagerAdapter {
 
     private final List<Fragment> mFragmentList = new ArrayList<>();
-    private final List<String> mFragmentTitleList = new ArrayList<>();
 
     public ContentPagerAdapter(FragmentManager fm){
         super(fm);
@@ -26,14 +25,7 @@ public class ContentPagerAdapter extends FragmentStatePagerAdapter {
         return mFragmentList.size();
     }
 
-    public void addFrag(ContentPagerItem fragment, String title){
+    public void addFrag(ContentPagerItem fragment){
         mFragmentList.add(fragment);
-        mFragmentTitleList.add(title);
-    }
-
-
-    @Override
-    public CharSequence getPageTitle(int position) {
-        return mFragmentTitleList.get(position);
     }
 }

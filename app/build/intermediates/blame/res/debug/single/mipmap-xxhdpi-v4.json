@@ -1,21 +1,5 @@
 [
     {
-        "merged": "/media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_receipt_white_24dp.png",
-        "source": "/media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/src/main/res/mipmap-xxhdpi/ic_receipt_white_24dp.png"
-    },
-    {
-        "merged": "/media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_language_white_24dp.png",
-        "source": "/media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/src/main/res/mipmap-xxhdpi/ic_language_white_24dp.png"
-    },
-    {
-        "merged": "/media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_meeting_48.png",
-        "source": "/media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/src/main/res/mipmap-xxhdpi/ic_meeting_48.png"
-    },
-    {
-        "merged": "/media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_arrow_back_white_24dp.png",
-        "source": "/media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/src/main/res/mipmap-xxhdpi/ic_arrow_back_white_24dp.png"
-    },
-    {
         "merged": "/media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_launcher.png",
         "source": "/media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     }

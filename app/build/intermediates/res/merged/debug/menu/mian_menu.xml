@@ -4,13 +4,13 @@
 
     <item
         android:id="@+id/action_tips"
-        android:icon="@mipmap/ic_receipt_white_24dp"
+        android:icon="@drawable/ic_lightbulb_outline_white_24dp"
         android:title="@string/action_tip"
         app:showAsAction="ifRoom"/>
 
     <item
         android:id="@+id/action_language"
         android:title="@string/action_language"
-        android:icon="@mipmap/ic_language_white_24dp"
+        android:icon="@drawable/ic_language_white_24dp"
         app:showAsAction="always" />
 </menu>

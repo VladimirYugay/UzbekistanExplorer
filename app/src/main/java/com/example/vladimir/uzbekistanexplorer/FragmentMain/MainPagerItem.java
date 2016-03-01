@@ -52,7 +52,7 @@ public class MainPagerItem extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         mText = (TextView)view.findViewById(R.id.text);
-        ImageView mImage = (ImageView)view.findViewById(R.id.image_anchor);
+        ImageView mImage = (ImageView)view.findViewById(R.id.image);
         mImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

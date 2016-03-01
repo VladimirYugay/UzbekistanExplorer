@@ -3,6 +3,8 @@ package com.example.vladimir.uzbekistanexplorer.FragmentMain;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.LocalBroadcastManager;
@@ -18,6 +20,9 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.example.vladimir.uzbekistanexplorer.FABScrollBehavior;
+import com.example.vladimir.uzbekistanexplorer.FragmentPhrasebook.PhrasebookFragment;
+import com.example.vladimir.uzbekistanexplorer.MainActivity;
 import com.example.vladimir.uzbekistanexplorer.R;
 
 
@@ -25,6 +30,7 @@ public class MainFragment extends Fragment {
 
     String current_language = "rus";
     MaterialDialog languageDialog;
+    TabLayout tabLayout;
 
     public MainFragment(){}
 
@@ -53,7 +59,7 @@ public class MainFragment extends Fragment {
         mPager.setOffscreenPageLimit(3);
         setupViewPager(mPager);
 
-        TabLayout tabLayout = (TabLayout)view.findViewById(R.id.tab_layout);
+        tabLayout = (TabLayout)view.findViewById(R.id.tab_layout);
         tabLayout.setupWithViewPager(mPager);
         tabLayout.setTabGravity(TabLayout.GRAVITY_CENTER);
         tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
@@ -65,6 +71,7 @@ public class MainFragment extends Fragment {
                     @Override
                     public void onSelection(MaterialDialog materialDialog, View view, int i, CharSequence charSequence) {
                         current_language = language_codes[i];
+                        updateTabs(current_language);
                         Intent intent = new Intent();
                         intent.setAction("MAIN_UPDATE");
                         intent.putExtra("Language", current_language);
@@ -72,6 +79,18 @@ public class MainFragment extends Fragment {
                     }
                 })
                 .build();
+
+        FABScrollBehavior behavior = new FABScrollBehavior();
+        FloatingActionButton fab = (FloatingActionButton)view.findViewById(R.id.fab);
+        CoordinatorLayout.LayoutParams params = (CoordinatorLayout.LayoutParams)fab.getLayoutParams();
+        params.setBehavior(behavior);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity activity = (MainActivity) getActivity();
+                activity.changeFragment(new PhrasebookFragment(current_language));
+            }
+        });
 
 
     }
@@ -95,10 +114,24 @@ public class MainFragment extends Fragment {
 
     public void setupViewPager(ViewPager viewPager) {
         MainPagerAdapter adapter = new MainPagerAdapter(getChildFragmentManager());
-        adapter.addFrag(new MainPagerItem(current_language, 0), "Tashkent");
-        adapter.addFrag(new MainPagerItem(current_language, 1), "Samarkand");
-        adapter.addFrag(new MainPagerItem(current_language, 2), "Bukhara");
-        adapter.addFrag(new MainPagerItem(current_language, 3), "Xorezm");
+        adapter.addFrag(new MainPagerItem(current_language, 0), "Ташкент");
+        adapter.addFrag(new MainPagerItem(current_language, 1), "Самарканд");
+        adapter.addFrag(new MainPagerItem(current_language, 2), "Бухара");
+        adapter.addFrag(new MainPagerItem(current_language, 3), "Хива");
             viewPager.setAdapter(adapter);
+    }
+
+    public void updateTabs(String lang){
+        String[] array = getActivity().getResources().getStringArray(R.array.tabs_rus);
+        switch (lang){
+            case "rus":
+                array = getActivity().getResources().getStringArray(R.array.tabs_rus);
+                break;
+            case "eng":
+                array = getActivity().getResources().getStringArray(R.array.tabs_eng);
+        }
+        for(int i = 0; i < array.length; i++){
+            tabLayout.getTabAt(i).setText(array[i]);
+        }
     }
 }

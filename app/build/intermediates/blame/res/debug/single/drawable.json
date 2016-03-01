@@ -52,12 +52,12 @@
         "source": "/media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_textfield_search_material.xml"
     },
     {
-        "merged": "/media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/build/intermediates/res/merged/debug/drawable/md_btn_selected_dark.xml",
-        "source": "/media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.4.2/res/drawable/md_btn_selected_dark.xml"
-    },
-    {
         "merged": "/media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/build/intermediates/res/merged/debug/drawable/md_item_selected_dark.xml",
         "source": "/media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.4.2/res/drawable/md_item_selected_dark.xml"
+    },
+    {
+        "merged": "/media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/build/intermediates/res/merged/debug/drawable/md_btn_selected_dark.xml",
+        "source": "/media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.4.2/res/drawable/md_btn_selected_dark.xml"
     },
     {
         "merged": "/media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml",
@@ -130,6 +130,10 @@
     {
         "merged": "/media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
         "source": "/media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "/media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/build/intermediates/res/merged/debug/drawable/common.png",
+        "source": "/media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/src/main/res/drawable/common.png"
     },
     {
         "merged": "/media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_thumb_material.xml",

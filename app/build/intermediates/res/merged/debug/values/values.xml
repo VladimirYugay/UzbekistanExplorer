@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/tools">
+    <string-array name="eng_places">
+        <item>Common</item>
+        <item>Hotel</item>
+        <item>Market</item>
+        <item>Money</item>
+        <item>Museum</item>
+        <item>Restaurant</item>
+        <item>Transport</item>
+    </string-array>
     <string-array name="languages">
         <item>Русский</item>
         <item>English</item>
@@ -7,6 +16,37 @@
     <string-array name="languages_codes">
         <item>rus</item>
         <item>eng</item>
+    </string-array>
+    <string-array name="rus_places">
+        <item>Общие</item>
+        <item>В отеле</item>
+        <item>В магазине</item>
+        <item>Деньги</item>
+        <item>В музее</item>
+        <item>В ресторане</item>
+        <item>Транспорт</item>
+    </string-array>
+    <string-array name="tabs_eng">
+        <item>Tashkent</item>
+        <item>Samarkand</item>
+        <item>Bukhara</item>
+        <item>Samarkand</item>
+    </string-array>
+    <string-array name="tabs_eng_content">
+        <item>Sights</item>
+        <item>Restaurants</item>
+        <item>Hotels</item>
+    </string-array>
+    <string-array name="tabs_rus">
+        <item>Ташкент</item>
+        <item>Самарканд</item>
+        <item>Бухара</item>
+        <item>Хива</item>
+    </string-array>
+    <string-array name="tabs_rus_content">
+        <item>Достопримечательности</item>
+        <item>Рестораны</item>
+        <item>Отели</item>
     </string-array>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -401,6 +441,8 @@
     <string name="app_name">UzbekistanExplorer</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
+    <string name="eng_phrasebook">Phrasebook</string>
+    <string name="rus_phrasebook">Разговорник</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="title_activity_content">ContentActivity</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>

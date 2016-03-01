@@ -22,7 +22,7 @@ public class ContentItem {
     }
 
     public void setAddress(String address){
-        this.name = name;
+        this.address = address;
     }
 
     public String getAddress(){

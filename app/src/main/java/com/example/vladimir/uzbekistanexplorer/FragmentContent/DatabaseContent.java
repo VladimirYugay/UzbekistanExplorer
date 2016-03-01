@@ -8,13 +8,14 @@ import android.database.sqlite.SQLiteQueryBuilder;
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 
 public class DatabaseContent extends SQLiteAssetHelper {
-    static String DATABASE_NAME = "tashkent.db";
+    static String DATABASE_NAME;
     private static final int DATABASE_VERSION = 1;
 
     String sqlTables = "tashkent_rus";
+
     public DatabaseContent(Context context, String dbPrefix, String city, String current_lang) {
         super(context, city + ".db", null, DATABASE_VERSION);
-        DATABASE_NAME = city + ".db";
+        if(city != null) DATABASE_NAME = city + ".db";
         this.sqlTables = dbPrefix + city + "_" + current_lang;
     }
 
