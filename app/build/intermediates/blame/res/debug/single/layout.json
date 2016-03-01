@@ -244,6 +244,10 @@
         "source": "/media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_lines.xml"
     },
     {
+        "merged": "/media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/build/intermediates/res/merged/debug/layout/fragment_overview.xml",
+        "source": "/media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/src/main/res/layout/fragment_overview.xml"
+    },
+    {
         "merged": "/media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
         "source": "/media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_toolbar.xml"
     },

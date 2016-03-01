@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
+import com.example.vladimir.uzbekistanexplorer.MainActivity;
 import com.example.vladimir.uzbekistanexplorer.R;
 import com.squareup.picasso.Picasso;
 
@@ -29,11 +31,20 @@ public class ArticlePagerAdapter extends PagerAdapter {
 
 
     @Override
-    public Object instantiateItem(ViewGroup container, int position) {
+    public Object instantiateItem(ViewGroup container, final int position) {
         View view = inflater.inflate(R.layout.article_pager_item, container, false);
         ImageView mImage = (ImageView)view.findViewById(R.id.image);
         String imageAddress = "file:///android_asset/images_for_article/" + mList[position] + ".jpg";
-        Picasso.with(context).load(imageAddress).fit().into(mImage);
+        Glide.with(context).load(imageAddress).fitCenter().into(mImage);
+
+        mImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity activity = (MainActivity) v.getContext();
+                activity.changeFragment(new OverviewFragment(mList, position));
+            }
+        });
+
         container.addView(view);
         return view;
     }

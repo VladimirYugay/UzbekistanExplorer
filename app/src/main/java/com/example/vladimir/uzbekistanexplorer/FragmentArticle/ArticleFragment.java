@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.example.vladimir.uzbekistanexplorer.FABScrollBehavior;
 import com.example.vladimir.uzbekistanexplorer.R;
+import com.example.vladimir.uzbekistanexplorer.ZoomOutPageTransformer;
 
 
 public class ArticleFragment extends Fragment {

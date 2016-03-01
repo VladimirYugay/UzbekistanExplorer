@@ -1,4 +1,4 @@
-package com.example.vladimir.uzbekistanexplorer.FragmentArticle;
+package com.example.vladimir.uzbekistanexplorer;
 
 import android.support.v4.view.ViewPager;
 import android.view.View;
@@ -31,9 +31,9 @@ public class ZoomOutPageTransformer implements ViewPager.PageTransformer {
             view.setScaleY(scaleFactor);
 
             // Fade the page relative to its size.
-            view.setAlpha(MIN_ALPHA +
-                    (scaleFactor - MIN_SCALE) /
-                            (1 - MIN_SCALE) * (1 - MIN_ALPHA));
+//            view.setAlpha(MIN_ALPHA +
+//                    (scaleFactor - MIN_SCALE) /
+//                            (1 - MIN_SCALE) * (1 - MIN_ALPHA));
 
         } else { // (1,+Infinity]
             // This page is way off-screen to the right.

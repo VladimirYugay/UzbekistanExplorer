@@ -249,6 +249,7 @@ android/support/v4/app/ActivityCompatHoneycomb.class
 android/support/v4/view/ViewCompatGingerbread.class
 android/support/v7/widget/SimpleItemAnimator.class
 android/support/v4/view/ViewCompatKitKat.class
+uk/co/senab/photoview/PhotoViewAttacher.class
 android/support/v4/app/FragmentTransaction.class
 android/support/v4/app/ActivityCompat.class
 android/support/annotation/BoolRes.class
@@ -268,6 +269,7 @@ android/support/v4/view/ViewPager$OnPageChangeListener.class
 android/support/annotation/RequiresPermission$Write.class
 android/support/v4/app/FragmentActivity$NonConfigurationInstances.class
 android/support/v4/media/MediaMetadataCompat$1.class
+uk/co/senab/photoview/IPhotoView.class
 android/support/design/R.class
 android/support/design/widget/Snackbar$6.class
 android/support/v4/media/session/PlaybackStateCompat$Actions.class
@@ -337,6 +339,7 @@ android/support/design/widget/CoordinatorLayout$ViewElevationComparator.class
 android/support/v4/app/FragmentManager.class
 android/support/design/widget/CoordinatorLayout$1.class
 com/squareup/picasso/Picasso.class
+uk/co/senab/photoview/PhotoView.class
 android/support/annotation/AttrRes.class
 android/support/v4/widget/ResourceCursorAdapter.class
 android/support/annotation/Size.class
