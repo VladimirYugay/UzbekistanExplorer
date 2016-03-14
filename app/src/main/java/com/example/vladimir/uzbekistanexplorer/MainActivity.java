@@ -1,26 +1,77 @@
 package com.example.vladimir.uzbekistanexplorer;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.Toast;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.content.LocalBroadcastManager;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.example.vladimir.uzbekistanexplorer.FragmentMain.MainFragment;
 
 public class MainActivity extends AppCompatActivity {
+
+    BroadcastReceiver mReceiver;
+    String mLanguage;
+    MaterialDialog mDialog;
+    SharedPreferences mPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if(savedInstanceState == null){
-            changeFragment(new MainFragment());
+
+        final String[] language_codes = getResources().getStringArray(R.array.languages_codes);
+        final String[] languages = getResources().getStringArray(R.array.languages);
+
+        mPreferences = getSharedPreferences(Constants.APP_SETTINGS, MODE_PRIVATE);
+        mLanguage  = mPreferences.getString(Constants.LANGUAGE, null);
+        
+        if(mLanguage == null && savedInstanceState == null){
+            mDialog = new MaterialDialog.Builder(this)
+                    .title("Choose the language")
+                    .items(languages)
+                    .itemsCallback(new MaterialDialog.ListCallback() {
+                        @Override
+                        public void onSelection(MaterialDialog materialDialog, View view, int i, CharSequence charSequence) {
+                            mPreferences.edit().putString(Constants.LANGUAGE, language_codes[i]).apply();
+                            Bundle bundle = new Bundle();
+                            bundle.putString(Constants.LANGUAGE, language_codes[i]);
+                            MainFragment fragment = new MainFragment();
+                            fragment.setArguments(bundle);
+                            changeFragment(fragment);
+                        }
+                    })
+                    .build();
+            mDialog.setCancelable(false);
+            mDialog.show();
         }
+    }
+
+    @Override
+    protected void onPause() {
+        LocalBroadcastManager.getInstance(MainActivity.this).unregisterReceiver(mReceiver);
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        IntentFilter intentFilter = new IntentFilter(Constants.UPDATE);
+        mReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                mLanguage = intent.getStringExtra(Constants.LANGUAGE);
+                mPreferences.edit().putString(Constants.LANGUAGE, mLanguage).apply();
+            }
+        };
+        LocalBroadcastManager.getInstance(MainActivity.this).registerReceiver(mReceiver, intentFilter);
+        super.onResume();
     }
 
     public void changeFragment(Fragment fragment){

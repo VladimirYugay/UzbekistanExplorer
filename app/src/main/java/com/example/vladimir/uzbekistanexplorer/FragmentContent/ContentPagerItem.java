@@ -1,7 +1,9 @@
 package com.example.vladimir.uzbekistanexplorer.FragmentContent;
 
-import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,40 +13,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.vladimir.uzbekistanexplorer.Constants;
 import com.example.vladimir.uzbekistanexplorer.R;
 import com.example.vladimir.uzbekistanexplorer.entity.ContentItem;
 import java.util.ArrayList;
 
-import rx.Subscriber;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.functions.Action1;
-import rx.schedulers.Schedulers;
-
 public class ContentPagerItem extends Fragment{
 
-    String current_lang;
-    String city;
-    String dbPrefix;
+    String mLanguage;
+    String mCity;
+    String mPrefix;
     RecyclerAdapter mAdapter;
 
 
     public ContentPagerItem(){}
-
-    @SuppressLint("ValidFragment")
-    public ContentPagerItem(String dbPrefix, String city, String current_lang){
-        this.dbPrefix = dbPrefix;
-        this.city = city;
-        this.current_lang = current_lang;
-    }
-
-    @Override
-    public void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putString("current_lang", current_lang);
-        outState.putString("city", city);
-        outState.putString("dbPrefix", dbPrefix);
-    }
-
 
     @Nullable
     @Override
@@ -54,42 +36,40 @@ public class ContentPagerItem extends Fragment{
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
-        if(savedInstanceState != null){
-            dbPrefix = savedInstanceState.getString("dbPrefix");
-            city = savedInstanceState.getString("city");
-            current_lang = savedInstanceState.getString("current_lang");
-        }
+        SharedPreferences mPreferences = getActivity().getSharedPreferences(Constants.APP_SETTINGS, Context.MODE_PRIVATE);
+        mPrefix = getArguments().getString(Constants.PREFIX);
+        mCity = getArguments().getString(Constants.CITY);
+        mLanguage = mPreferences.getString(Constants.LANGUAGE, null);
 
         RecyclerView mRecycler = (RecyclerView)view.findViewById(R.id.recycler);
         mRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
         mAdapter = new RecyclerAdapter();
-        rx.Observable<ArrayList<ContentItem>> arrayListObservable = rx.Observable.create(new rx.Observable.OnSubscribe<ArrayList<ContentItem>>() {
-            @Override
-            public void call(Subscriber<? super ArrayList<ContentItem>> subscriber) {
-                try {
-                    ArrayList<ContentItem> arrayList = getData(dbPrefix, city, current_lang);
-                    subscriber.onNext(arrayList);
-                    subscriber.onCompleted();
-                } catch (Exception e) {
-                    subscriber.onError(e);
-                }
-            }
-        });
-
-        arrayListObservable.subscribeOn(Schedulers.newThread())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Action1<ArrayList<ContentItem>>() {
-                    @Override
-                    public void call(ArrayList<ContentItem> mainItems) {
-                        mAdapter.addAll(mainItems);
-                    }
-                });
+        new LoadData(mPrefix, mCity, mLanguage).execute();
         mRecycler.setAdapter(mAdapter);
     }
 
+    private class LoadData extends AsyncTask<Void, Void, ArrayList<ContentItem>>{
 
-    public ArrayList<ContentItem> getData(String dbPrefix, String city, String current_lang){
+        String dbPrefix, city, current_lang;
+        protected LoadData(String dbPrefix, String city, String current_lang){
+            this.dbPrefix = dbPrefix;
+            this.city = city;
+            this.current_lang = current_lang;
+        }
+
+        @Override
+        protected ArrayList<ContentItem> doInBackground(Void... params) {
+            return getData(dbPrefix, city, current_lang);
+        }
+
+        @Override
+        protected void onPostExecute(ArrayList<ContentItem> arrayList) {
+            mAdapter.addAll(arrayList);
+        }
+    }
+    private ArrayList<ContentItem> getData(String dbPrefix, String city, String current_lang){
         ArrayList<ContentItem> arrayList = new ArrayList<>();
         DatabaseContent database = new DatabaseContent(getActivity(), dbPrefix, city, current_lang);
         Cursor names = database.getNames();

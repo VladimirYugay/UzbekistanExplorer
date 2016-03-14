@@ -1,6 +1,8 @@
 package com.example.vladimir.uzbekistanexplorer.FragmentContent;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -14,31 +16,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.example.vladimir.uzbekistanexplorer.Constants;
 import com.example.vladimir.uzbekistanexplorer.R;
 import com.squareup.picasso.Picasso;
 
 public class ContentFragment extends Fragment {
 
-    String current_lang;
-    String city;
-    int city_code;
-    TabLayout tabLayout;
+    String mLanguage, mCity;
+    int mCityCode;
+    TabLayout mTabLayout;
     Toolbar mToolbar;
     ImageView mImage;
+    SharedPreferences mPreferences;
 
     public ContentFragment(){}
-
-    @SuppressLint("ValidFragment")
-    public ContentFragment(String current_lang, int city_code) {
-        this.current_lang = current_lang;
-        this.city = getCityName(city_code);
-        this.city_code = city_code;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
 
     @Nullable
     @Override
@@ -50,6 +41,11 @@ public class ContentFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        mPreferences = getActivity().getSharedPreferences(Constants.APP_SETTINGS, Context.MODE_PRIVATE);
+        mLanguage = mPreferences.getString(Constants.LANGUAGE, null);
+        mCityCode = getArguments().getInt(Constants.CITY_CODE);
+        mCity = getCityName(mCityCode);
+
         mToolbar = (Toolbar)view.findViewById(R.id.toolbar);
         ((AppCompatActivity) getActivity()).setSupportActionBar(mToolbar);
         mToolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
@@ -59,29 +55,34 @@ public class ContentFragment extends Fragment {
                 getActivity().getSupportFragmentManager().popBackStackImmediate();
             }
         });
-        updateToolbar(city_code, current_lang);
+        updateToolbar(mCityCode, mLanguage);
 
         final CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout)view.findViewById(R.id.collapse_toolbar);
         collapsingToolbarLayout.setTitleEnabled(false);
 
-        final ViewPager mPager = (ViewPager)view.findViewById(R.id.view_pager);
-        mPager.setOffscreenPageLimit(3);
+        ViewPager mPager = (ViewPager)view.findViewById(R.id.view_pager);
         setupViewPager(mPager);
 
         mImage = (ImageView)view.findViewById(R.id.header);
-        updateImage(city_code);
+        updateImage(mCityCode);
 
-        tabLayout = (TabLayout)view.findViewById(R.id.tab_layout);
-        tabLayout.setupWithViewPager(mPager);
-        setupTabLayout(tabLayout);
+        mTabLayout = (TabLayout)view.findViewById(R.id.tab_layout);
+        mTabLayout.setupWithViewPager(mPager);
+        setupTabLayout(mTabLayout);
     }
 
 
     public void setupViewPager(ViewPager viewPager) {
         ContentPagerAdapter adapter = new ContentPagerAdapter(getChildFragmentManager());
-        adapter.addFrag(new ContentPagerItem("places_", city, current_lang));
-        adapter.addFrag(new ContentPagerItem("food_", city, current_lang));
-        adapter.addFrag(new ContentPagerItem("hotels_", city, current_lang));
+        String[] array = getActivity().getResources().getStringArray(R.array.codes_activities);
+        for(int i = 0; i < 3; i++){
+            Bundle bundle = new Bundle();
+            bundle.putString(Constants.CITY, mCity);
+            bundle.putString(Constants.PREFIX, array[i]);
+            ContentPagerItem fragment = new ContentPagerItem();
+            fragment.setArguments(bundle);
+            adapter.addFrag(fragment);
+        }
         viewPager.setAdapter(adapter);
     }
 
@@ -91,7 +92,6 @@ public class ContentFragment extends Fragment {
             tabLayout.getTabAt(1).setIcon(R.drawable.ic_food_48);
             tabLayout.getTabAt(2).setIcon(R.drawable.ic_hotel_48);
         }
-
     }
 
     public String getCityName(int i){

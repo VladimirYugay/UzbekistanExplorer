@@ -1,6 +1,8 @@
 package com.example.vladimir.uzbekistanexplorer.FragmentMain;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.CoordinatorLayout;
@@ -20,6 +22,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.example.vladimir.uzbekistanexplorer.Constants;
 import com.example.vladimir.uzbekistanexplorer.FABScrollBehavior;
 import com.example.vladimir.uzbekistanexplorer.FragmentPhrasebook.PhrasebookFragment;
 import com.example.vladimir.uzbekistanexplorer.MainActivity;
@@ -28,9 +31,10 @@ import com.example.vladimir.uzbekistanexplorer.R;
 
 public class MainFragment extends Fragment {
 
-    String current_language = "rus";
-    MaterialDialog languageDialog;
-    TabLayout tabLayout;
+    String mLanguage;
+    MaterialDialog mDialog;
+    TabLayout mTabLayout;
+    String[] mArray;
 
     public MainFragment(){}
 
@@ -49,6 +53,10 @@ public class MainFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences(Constants.APP_SETTINGS, Context.MODE_PRIVATE);
+        mLanguage = sharedPreferences.getString(Constants.LANGUAGE, null);
+
+        mArray = getActivity().getResources().getStringArray(R.array.tabs_rus);
         final String[] language_codes = getActivity().getResources().getStringArray(R.array.languages_codes);
         final String[] languages = getActivity().getResources().getStringArray(R.array.languages);
 
@@ -59,26 +67,32 @@ public class MainFragment extends Fragment {
         mPager.setOffscreenPageLimit(3);
         setupViewPager(mPager);
 
-        tabLayout = (TabLayout)view.findViewById(R.id.tab_layout);
-        tabLayout.setupWithViewPager(mPager);
-        tabLayout.setTabGravity(TabLayout.GRAVITY_CENTER);
-        tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
+        mTabLayout = (TabLayout)view.findViewById(R.id.tab_layout);
+        mTabLayout.setupWithViewPager(mPager);
+        mTabLayout.setTabGravity(TabLayout.GRAVITY_CENTER);
+        mTabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
+        updateTabs(mLanguage);
 
-        languageDialog = new MaterialDialog.Builder(getActivity())
+        mDialog = new MaterialDialog.Builder(getActivity())
                 .title("Choose the language")
                 .items(languages)
                 .itemsCallback(new MaterialDialog.ListCallback() {
                     @Override
                     public void onSelection(MaterialDialog materialDialog, View view, int i, CharSequence charSequence) {
-                        current_language = language_codes[i];
-                        updateTabs(current_language);
+                        mLanguage = language_codes[i];
+                        updateTabs(mLanguage);
+                        SharedPreferences sp = getActivity().getSharedPreferences(Constants.APP_SETTINGS, Context.MODE_PRIVATE);
+                        sp.edit().putString(Constants.LANGUAGE, language_codes[i]).apply();
+
                         Intent intent = new Intent();
-                        intent.setAction("MAIN_UPDATE");
-                        intent.putExtra("Language", current_language);
+                        intent.setAction(Constants.UPDATE);
+                        intent.putExtra(Constants.LANGUAGE , mLanguage);
                         LocalBroadcastManager.getInstance(getActivity()).sendBroadcast(intent);
                     }
                 })
                 .build();
+
+
 
         FABScrollBehavior behavior = new FABScrollBehavior();
         FloatingActionButton fab = (FloatingActionButton)view.findViewById(R.id.fab);
@@ -88,7 +102,8 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 MainActivity activity = (MainActivity) getActivity();
-                activity.changeFragment(new PhrasebookFragment(current_language));
+                PhrasebookFragment fragment = new PhrasebookFragment();
+                activity.changeFragment(fragment);
             }
         });
 
@@ -104,7 +119,7 @@ public class MainFragment extends Fragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.action_language:
-                languageDialog.show();
+                mDialog.show();
                 break;
             default:
                 Toast.makeText(getContext(), "TIPS", Toast.LENGTH_SHORT).show();
@@ -114,24 +129,27 @@ public class MainFragment extends Fragment {
 
     public void setupViewPager(ViewPager viewPager) {
         MainPagerAdapter adapter = new MainPagerAdapter(getChildFragmentManager());
-        adapter.addFrag(new MainPagerItem(current_language, 0), "Ташкент");
-        adapter.addFrag(new MainPagerItem(current_language, 1), "Самарканд");
-        adapter.addFrag(new MainPagerItem(current_language, 2), "Бухара");
-        adapter.addFrag(new MainPagerItem(current_language, 3), "Хива");
-            viewPager.setAdapter(adapter);
+        for(int i = 0; i < 4; i++){
+            MainPagerItem fragment = new MainPagerItem();
+            Bundle bundle = new Bundle();
+            bundle.putString(Constants.LANGUAGE, mLanguage);
+            bundle.putInt(Constants.CITY_CODE, i);
+            fragment.setArguments(bundle);
+            adapter.addFrag(fragment, mArray[i]);
+        }
+        viewPager.setAdapter(adapter);
     }
 
     public void updateTabs(String lang){
-        String[] array = getActivity().getResources().getStringArray(R.array.tabs_rus);
         switch (lang){
             case "rus":
-                array = getActivity().getResources().getStringArray(R.array.tabs_rus);
+                mArray = getActivity().getResources().getStringArray(R.array.tabs_rus);
                 break;
             case "eng":
-                array = getActivity().getResources().getStringArray(R.array.tabs_eng);
+                mArray = getActivity().getResources().getStringArray(R.array.tabs_eng);
         }
-        for(int i = 0; i < array.length; i++){
-            tabLayout.getTabAt(i).setText(array[i]);
+        for(int i = 0; i < mArray.length; i++){
+            mTabLayout.getTabAt(i).setText(mArray[i]);
         }
     }
 }

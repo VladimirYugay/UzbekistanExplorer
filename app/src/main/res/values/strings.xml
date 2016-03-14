@@ -6,6 +6,7 @@
     <string name="rus_phrasebook">Разговорник</string>
     <string name="eng_phrasebook">Phrasebook</string>
 
+
     <string-array name="languages_codes">
         <item>rus</item>
         <item>eng</item>
@@ -60,6 +61,22 @@
         <item>Museum</item>
         <item>Restaurant</item>
         <item>Transport</item>
+    </string-array>
+
+    <string-array name="codes_places">
+        <item>common</item>
+        <item>hotel</item>
+        <item>market</item>
+        <item>money</item>
+        <item>museums</item>
+        <item>restaurant</item>
+        <item>transportation</item>
+    </string-array>
+
+    <string-array name="codes_activities">
+        <item>places_</item>
+        <item>food_</item>
+        <item>hotels_</item>
     </string-array>
 
     <string name="title_activity_content">ContentActivity</string>

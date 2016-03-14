@@ -1,5 +1,6 @@
 package com.example.vladimir.uzbekistanexplorer.FragmentContent;
 
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,7 +28,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_recycler, parent, false);
         return new ViewHolder(view);
     }
 
@@ -42,8 +43,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             @Override
             public void onClick(View v) {
                 MainActivity activity = (MainActivity) v.getContext();
-                activity.changeFragment(new ArticleFragment(mList.get(position).getImages(), mList.get(position).getDescription(),
-                        mList.get(position).getName()));
+                Bundle bundle = new Bundle();
+                bundle.putString("IMAGES", mList.get(position).getImages());
+                bundle.putString("DESCRIPTION", mList.get(position).getDescription());
+                bundle.putString("NAME", mList.get(position).getName());
+                ArticleFragment fragment = new ArticleFragment();
+                fragment.setArguments(bundle);
+                activity.changeFragment(fragment);
             }
         });
     }

@@ -1,6 +1,7 @@
 package com.example.vladimir.uzbekistanexplorer.FragmentPhrasebook;
 
-import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,44 +12,31 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.vladimir.uzbekistanexplorer.Constants;
 import com.example.vladimir.uzbekistanexplorer.R;
 
 
 public class PhrasebookFragment extends Fragment {
 
-    String language;
+    String mLanguage;
+    SharedPreferences mPreferences;
 
     public PhrasebookFragment(){}
-
-    @SuppressLint("ValidFragment")
-    public PhrasebookFragment(String language){
-        this.language = language;
-    }
-
-    @Override
-    public void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putString("Phrase", language);
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        mPreferences = getActivity().getSharedPreferences(Constants.APP_SETTINGS, Context.MODE_PRIVATE);
+        this.mLanguage = mPreferences.getString(Constants.LANGUAGE, null);
         return inflater.inflate(R.layout.recycler_phrases, container, false);
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        if(savedInstanceState != null) language = savedInstanceState.getString("Phrase");
 
         Toolbar mToolbar = (Toolbar)view.findViewById(R.id.toolbar);
         mToolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
-        mToolbar.setTitle(getHeader(language));
+        mToolbar.setTitle(getHeader(mLanguage));
         mToolbar.setTitleTextColor(getActivity().getResources().getColor(R.color.white));
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,7 +47,7 @@ public class PhrasebookFragment extends Fragment {
 
         RecyclerView mRecycler = (RecyclerView)view.findViewById(R.id.recycler);
         mRecycler.setLayoutManager(new GridLayoutManager(getActivity(), 3));
-        mRecycler.setAdapter(new PhaseRecyclerAdapter(language, getPlaces(language)));
+        mRecycler.setAdapter(new PhrasebookAdapter(mLanguage, getPlaces(mLanguage)));
     }
 
 
