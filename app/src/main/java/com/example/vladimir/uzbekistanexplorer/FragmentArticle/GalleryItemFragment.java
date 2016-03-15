@@ -1,6 +1,8 @@
 package com.example.vladimir.uzbekistanexplorer.FragmentArticle;
 
 
+import android.media.Image;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,11 +13,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.davemorrissey.labs.subscaleview.ImageSource;
+import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView;
 import com.example.vladimir.uzbekistanexplorer.DepthPageTransformer;
 import com.example.vladimir.uzbekistanexplorer.R;
+import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Target;
 
 import uk.co.senab.photoview.PhotoView;
 
@@ -36,7 +44,14 @@ public class GalleryItemFragment extends Fragment{
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        FixedViewPager viewPager = (FixedViewPager)view.findViewById(R.id.container);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getActivity().getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(getActivity().getResources().getColor(R.color.colorPrimaryDark));
+        }
+
+        ViewPager viewPager = (ViewPager)view.findViewById(R.id.container);
         viewPager.setAdapter(new SectionPagerAdapter(getChildFragmentManager(), mImages));
         viewPager.setCurrentItem(mPosition);
         viewPager.setPageTransformer(false, new DepthPageTransformer());
@@ -62,7 +77,7 @@ public class GalleryItemFragment extends Fragment{
         }
     }
 
-    private static class PlaceholderFragment extends Fragment {
+    public static class PlaceholderFragment extends Fragment {
 
         String url;
         int position;
@@ -75,9 +90,9 @@ public class GalleryItemFragment extends Fragment{
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.image_view, container, false);
-            final PhotoView imageView = (PhotoView) rootView.findViewById(R.id.detail_image);
+            ImageView imageView = (ImageView)rootView.findViewById(R.id.image);
             String imageAddress = "file:///android_asset/images_for_article/" + url + ".jpg";
-            Glide.with(getActivity()).load(imageAddress).thumbnail(0.1f).into(imageView);
+            Picasso.with(getActivity()).load(imageAddress).into(imageView);
             return rootView;
         }
 

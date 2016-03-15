@@ -68,7 +68,7 @@
                         android:id="@+id/text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/title_activity_content" />
+                        android:textColor="@color/primaryText" />
 
                 </LinearLayout>
 

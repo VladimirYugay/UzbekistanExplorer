@@ -5,6 +5,8 @@
     <string name="action_tip">Tips</string>
     <string name="rus_phrasebook">Разговорник</string>
     <string name="eng_phrasebook">Phrasebook</string>
+    <string name="rus_tips">Подсказки</string>
+    <string name="eng_tips">Hints</string>
 
 
     <string-array name="languages_codes">

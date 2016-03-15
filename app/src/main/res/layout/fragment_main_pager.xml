@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="8dp"
-            android:layout_below="@+id/image"/>
+            android:textColor="@color/primaryText"/>
     </LinearLayout>
 
 </android.support.v4.widget.NestedScrollView>

@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         mPreferences = getSharedPreferences(Constants.APP_SETTINGS, MODE_PRIVATE);
         mLanguage  = mPreferences.getString(Constants.LANGUAGE, null);
-        
+
         if(mLanguage == null && savedInstanceState == null){
             mDialog = new MaterialDialog.Builder(this)
                     .title("Choose the language")
@@ -41,16 +41,16 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onSelection(MaterialDialog materialDialog, View view, int i, CharSequence charSequence) {
                             mPreferences.edit().putString(Constants.LANGUAGE, language_codes[i]).apply();
-                            Bundle bundle = new Bundle();
-                            bundle.putString(Constants.LANGUAGE, language_codes[i]);
                             MainFragment fragment = new MainFragment();
-                            fragment.setArguments(bundle);
                             changeFragment(fragment);
                         }
                     })
                     .build();
             mDialog.setCancelable(false);
             mDialog.show();
+        }else if(getSupportFragmentManager().getBackStackEntryCount() == 0){
+            MainFragment fragment = new MainFragment();
+            changeFragment(fragment);
         }
     }
 

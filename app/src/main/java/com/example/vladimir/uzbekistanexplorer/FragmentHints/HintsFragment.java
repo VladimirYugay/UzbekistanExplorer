@@ -23,7 +23,7 @@ import java.util.ArrayList;
 public class HintsFragment extends Fragment{
 
     String mLanguage;
-     HintsAdapter mAdapter;
+    HintsAdapter mAdapter;
 
     public HintsFragment(){
     }

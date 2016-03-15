@@ -8,4 +8,5 @@
     <color name="secondaryText">#727272</color>
     <color name="divideColor">#B6B6B6</color>
     <color name="white">#FFFFFF</color>
+    <color name="transparent">@android:color/transparent</color>
 </resources>

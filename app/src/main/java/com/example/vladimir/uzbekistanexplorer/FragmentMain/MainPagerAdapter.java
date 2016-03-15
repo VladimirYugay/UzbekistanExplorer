@@ -28,7 +28,7 @@ public class MainPagerAdapter extends FragmentStatePagerAdapter {
         return mFragmentList.size();
     }
 
-    public void addFrag(MainPagerItem fragment, String title){
+    public void addFrag(MainPagerFragment fragment, String title){
         mFragmentList.add(fragment);
         mFragmentTitleList.add(title);
     }

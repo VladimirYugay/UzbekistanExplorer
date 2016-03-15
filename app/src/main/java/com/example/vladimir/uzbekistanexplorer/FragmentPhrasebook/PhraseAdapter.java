@@ -15,11 +15,10 @@ import java.util.List;
 class PhraseAdapter extends RecyclerView.Adapter<PhraseAdapter.BinderHolder>{
 
     List<Phrases> arrayList = new ArrayList<>();
-    int type;
+    boolean isNative;
 
-    public PhraseAdapter(String[] strings) {
-        if(strings.length == 3) type = 1;
-        else type = 0;
+    public PhraseAdapter(boolean isNative) {
+        this.isNative = isNative;
     }
 
     public void addAll(ArrayList<Phrases> list){
@@ -28,15 +27,10 @@ class PhraseAdapter extends RecyclerView.Adapter<PhraseAdapter.BinderHolder>{
     }
 
     @Override
-    public int getItemViewType(int position) {
-        return super.getItemViewType(position);
-    }
-
-    @Override
      public BinderHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        if(viewType == 1) return new ThreeHolder(inflater.inflate(R.layout.phrases_double, parent, false));
-        else return new TwoHolder(inflater.inflate(R.layout.phrases_double, parent, false));
+        if(!isNative) return new ForeignHolder(inflater.inflate(R.layout.phrases_foreign, parent, false));
+        else return new NativeHolder(inflater.inflate(R.layout.phrases_native, parent, false));
      }
 
      @Override
@@ -56,9 +50,9 @@ class PhraseAdapter extends RecyclerView.Adapter<PhraseAdapter.BinderHolder>{
          public abstract void onBind(Phrases phrases);
      }
 
-    public class TwoHolder extends BinderHolder{
+    public class NativeHolder extends BinderHolder{
         TextView mUzbek, mRussian, mRussianTrans;
-        public TwoHolder(View itemView) {
+        public NativeHolder(View itemView) {
             super(itemView);
             mUzbek = (TextView)itemView.findViewById(R.id.uzbek);
             mRussian = (TextView)itemView.findViewById(R.id.russian);
@@ -67,13 +61,15 @@ class PhraseAdapter extends RecyclerView.Adapter<PhraseAdapter.BinderHolder>{
 
         @Override
         public void onBind(Phrases phrases) {
-
+            mRussian.setText(phrases.getRussian());
+            mRussianTrans.setText(phrases.getRussian_transcription());
+            mUzbek.setText(phrases.getUzbek());
         }
     }
 
-    public class ThreeHolder extends BinderHolder{
+    public class ForeignHolder extends BinderHolder{
         TextView mForeign, mUzbek, mRussian, mRussianTrans;
-        public ThreeHolder(View itemView) {
+        public ForeignHolder(View itemView) {
             super(itemView);
             mForeign = (TextView)itemView.findViewById(R.id.foreign);
             mUzbek = (TextView)itemView.findViewById(R.id.uzbek);
@@ -83,7 +79,10 @@ class PhraseAdapter extends RecyclerView.Adapter<PhraseAdapter.BinderHolder>{
 
         @Override
         public void onBind(Phrases phrases) {
-
+            mForeign.setText(phrases.getForeign());
+            mRussian.setText(phrases.getRussian());
+            mRussianTrans.setText(phrases.getRussian_transcription());
+            mUzbek.setText(phrases.getUzbek());
         }
     }
 

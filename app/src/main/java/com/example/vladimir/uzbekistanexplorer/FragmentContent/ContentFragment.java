@@ -3,6 +3,8 @@ package com.example.vladimir.uzbekistanexplorer.FragmentContent;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -10,10 +12,14 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.view.ContextThemeWrapper;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import com.example.vladimir.uzbekistanexplorer.Constants;
@@ -46,6 +52,12 @@ public class ContentFragment extends Fragment {
         mCityCode = getArguments().getInt(Constants.CITY_CODE);
         mCity = getCityName(mCityCode);
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getActivity().getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(getActivity().getResources().getColor(R.color.transparent));
+        }
+
         mToolbar = (Toolbar)view.findViewById(R.id.toolbar);
         ((AppCompatActivity) getActivity()).setSupportActionBar(mToolbar);
         mToolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
@@ -61,6 +73,7 @@ public class ContentFragment extends Fragment {
         collapsingToolbarLayout.setTitleEnabled(false);
 
         ViewPager mPager = (ViewPager)view.findViewById(R.id.view_pager);
+        mPager.setOffscreenPageLimit(3);
         setupViewPager(mPager);
 
         mImage = (ImageView)view.findViewById(R.id.header);

@@ -54,7 +54,7 @@ public final class R {
 	public static final class styleable {
 		public static final int[] AddFloatingActionButton = { 0x7f01003b };
 		public static final int AddFloatingActionButton_fab_plusIconColor = 0;
-		public static final int[] FloatingActionButton = { 0x7f010036, 0x7f010070, 0x7f010071, 0x7f010072, 0x7f010073, 0x7f010074, 0x7f010075, 0x7f010076, 0x7f010077, 0x7f010078, 0x7f010079, 0x7f01007a, 0x7f01014b, 0x7f01014c };
+		public static final int[] FloatingActionButton = { 0x7f010036, 0x7f010070, 0x7f010071, 0x7f010072, 0x7f010073, 0x7f010074, 0x7f010075, 0x7f010076, 0x7f010077, 0x7f010078, 0x7f010079, 0x7f01007a, 0x7f010151, 0x7f010152 };
 		public static final int FloatingActionButton_fab_colorDisabled = 2;
 		public static final int FloatingActionButton_fab_colorNormal = 3;
 		public static final int FloatingActionButton_fab_colorPressed = 1;

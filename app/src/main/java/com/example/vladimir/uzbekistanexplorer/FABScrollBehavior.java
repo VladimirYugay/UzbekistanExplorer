@@ -1,42 +1,47 @@
 package com.example.vladimir.uzbekistanexplorer;
 
+import android.content.Context;
+import android.content.res.TypedArray;
+import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.ViewCompat;
+import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Toast;
 
-public class FABScrollBehavior extends FloatingActionButton.Behavior{
+public class FABScrollBehavior extends CoordinatorLayout.Behavior<FloatingActionButton>{
 
-    int current = 0;
+    private int toolbarHeight;
 
-    public FABScrollBehavior(){
-        super();
+    public FABScrollBehavior(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        this.toolbarHeight = getToolbarHeight(context);
     }
 
     @Override
-    public void onNestedScroll(CoordinatorLayout coordinatorLayout, FloatingActionButton child, View target, int dxConsumed, int dyConsumed, int dxUnconsumed, int dyUnconsumed) {
-        super.onNestedScroll(coordinatorLayout, child, target, dxConsumed, dyConsumed, dxUnconsumed, dyUnconsumed);
+    public boolean layoutDependsOn(CoordinatorLayout parent, FloatingActionButton fab, View dependency) {
+        return dependency instanceof AppBarLayout;
+    }
 
-        int total = coordinatorLayout.getLayoutParams().height;
-        current += dyConsumed;
-        if(current >= total / 6 * 5 && child.getVisibility() == View.VISIBLE){
-            child.hide();
-        } else {
-            child.show();
+    @Override
+    public boolean onDependentViewChanged(CoordinatorLayout parent, FloatingActionButton fab, View dependency) {
+        if (dependency instanceof AppBarLayout) {
+            CoordinatorLayout.LayoutParams lp = (CoordinatorLayout.LayoutParams) fab.getLayoutParams();
+            int fabBottomMargin = lp.bottomMargin;
+            int distanceToScroll = fab.getHeight() + fabBottomMargin;
+            float ratio = (float)dependency.getY()/(float)toolbarHeight;
+            fab.setTranslationY(-distanceToScroll * ratio);
         }
-
-
-//
-//        if(dyConsumed > coordinatorLayout.getLayoutParams().height / 6 * 5 && child.getVisibility() == View.VISIBLE){
-//            child.hide();
-//        }else if(dyConsumed < coordinatorLayout.getLayoutParams().height / 6 * 5 && child.getVisibility() == View.GONE){
-//            child.show();
-//        }
+        return true;
     }
 
-    @Override
-    public boolean onStartNestedScroll(CoordinatorLayout coordinatorLayout, FloatingActionButton child, View directTargetChild, View target, int nestedScrollAxes) {
-        return nestedScrollAxes == ViewCompat.SCROLL_AXIS_VERTICAL;
+    public static int getToolbarHeight(Context context) {
+        final TypedArray styledAttributes = context.getTheme().obtainStyledAttributes(
+                new int[]{R.attr.actionBarSize});
+        int toolbarHeight = (int) styledAttributes.getDimension(0, 0);
+        styledAttributes.recycle();
+        return toolbarHeight;
     }
+
 }

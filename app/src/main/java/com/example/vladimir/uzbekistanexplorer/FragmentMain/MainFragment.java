@@ -3,6 +3,7 @@ package com.example.vladimir.uzbekistanexplorer.FragmentMain;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.CoordinatorLayout;
@@ -19,12 +20,14 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
+import android.view.Window;
+import android.view.WindowManager;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.example.vladimir.uzbekistanexplorer.Constants;
 import com.example.vladimir.uzbekistanexplorer.FABScrollBehavior;
 import com.example.vladimir.uzbekistanexplorer.FragmentPhrasebook.PhrasebookFragment;
+import com.example.vladimir.uzbekistanexplorer.FragmentHints.HintsFragment;
 import com.example.vladimir.uzbekistanexplorer.MainActivity;
 import com.example.vladimir.uzbekistanexplorer.R;
 
@@ -55,6 +58,13 @@ public class MainFragment extends Fragment {
 
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences(Constants.APP_SETTINGS, Context.MODE_PRIVATE);
         mLanguage = sharedPreferences.getString(Constants.LANGUAGE, null);
+        String answer = mLanguage;
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getActivity().getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(getActivity().getResources().getColor(R.color.colorPrimaryDark));
+        }
 
         mArray = getActivity().getResources().getStringArray(R.array.tabs_rus);
         final String[] language_codes = getActivity().getResources().getStringArray(R.array.languages_codes);
@@ -94,7 +104,7 @@ public class MainFragment extends Fragment {
 
 
 
-        FABScrollBehavior behavior = new FABScrollBehavior();
+        FABScrollBehavior behavior = new FABScrollBehavior(getActivity(), null);
         FloatingActionButton fab = (FloatingActionButton)view.findViewById(R.id.fab);
         CoordinatorLayout.LayoutParams params = (CoordinatorLayout.LayoutParams)fab.getLayoutParams();
         params.setBehavior(behavior);
@@ -122,7 +132,9 @@ public class MainFragment extends Fragment {
                 mDialog.show();
                 break;
             default:
-                Toast.makeText(getContext(), "TIPS", Toast.LENGTH_SHORT).show();
+                HintsFragment fragment = new HintsFragment();
+                MainActivity activity = (MainActivity) getActivity();
+                activity.changeFragment(fragment);
         }
         return true;
     }
@@ -130,7 +142,7 @@ public class MainFragment extends Fragment {
     public void setupViewPager(ViewPager viewPager) {
         MainPagerAdapter adapter = new MainPagerAdapter(getChildFragmentManager());
         for(int i = 0; i < 4; i++){
-            MainPagerItem fragment = new MainPagerItem();
+            MainPagerFragment fragment = new MainPagerFragment();
             Bundle bundle = new Bundle();
             bundle.putString(Constants.LANGUAGE, mLanguage);
             bundle.putInt(Constants.CITY_CODE, i);

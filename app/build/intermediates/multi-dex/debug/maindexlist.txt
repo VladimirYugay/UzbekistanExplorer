@@ -12,7 +12,6 @@ android/support/v4/media/session/MediaSessionCompat$MediaSessionImpl.class
 android/support/v7/widget/TintTypedArray.class
 android/support/v4/view/accessibility/AccessibilityEventCompat.class
 android/support/v7/app/AppCompatActivity.class
-rx/annotations/Experimental.class
 android/support/v7/app/ActionBar$NavigationMode.class
 com/bumptech/glide/GenericRequestBuilder.class
 android/support/v4/app/BaseFragmentActivityDonut.class
@@ -69,6 +68,7 @@ android/support/design/widget/TabLayout$TabLayoutOnPageChangeListener.class
 android/support/v7/widget/RecyclerView$SmoothScroller.class
 android/support/v7/graphics/drawable/DrawerArrowDrawable$ArrowDirection.class
 android/support/v4/media/session/MediaSessionCompat$OnActiveChangeListener.class
+com/example/vladimir/uzbekistanexplorer/FragmentMain/MainFragment.class
 android/support/v7/app/ActionBar$OnNavigationListener.class
 android/support/v7/app/ActionBar$OnMenuVisibilityListener.class
 android/support/v7/widget/RecyclerView$OnItemTouchListener.class
@@ -332,7 +332,6 @@ android/support/v7/widget/RecyclerView$ItemDecoration.class
 android/support/v4/view/ViewCompat$LollipopViewCompatImpl.class
 android/support/v4/media/session/MediaSessionCompat$SessionFlags.class
 uk/co/senab/photoview/PhotoView.class
-rx/annotations/Beta.class
 android/support/v4/media/session/PlaybackStateCompat$Actions.class
 com/squareup/picasso/RequestCreator.class
 android/support/v7/widget/OpReorderer$Callback.class
@@ -402,7 +401,6 @@ android/support/annotation/CheckResult.class
 android/support/v4/view/ViewCompat$ICSMr1ViewCompatImpl.class
 android/support/v4/media/MediaBrowserCompat$ConnectionCallback.class
 com/getbase/floatingactionbutton/R.class
-rx/Observable.class
 android/support/annotation/UiThread.class
 android/support/v7/app/ActionBar.class
 android/support/v7/widget/RecyclerView$ViewFlinger.class

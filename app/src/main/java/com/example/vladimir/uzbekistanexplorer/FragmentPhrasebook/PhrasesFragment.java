@@ -22,7 +22,8 @@ import com.example.vladimir.uzbekistanexplorer.entity.Phrases;
 
 import java.util.ArrayList;
 
-public class PhrasesFragment extends Fragment {
+public class
+        PhrasesFragment extends Fragment {
 
     String mPlace, mTitle, mLanguage;
     PhraseAdapter mAdapter;
@@ -54,21 +55,23 @@ public class PhrasesFragment extends Fragment {
             }
         });
 
-        RecyclerView mRecycler = (RecyclerView)view.findViewById(R.id.recycler);
-        mAdapter = new PhraseAdapter(loadLangs(mLanguage));
-        mRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
+        RecyclerView recyclerView = (RecyclerView)view.findViewById(R.id.recycler);
+        mAdapter = new PhraseAdapter(isNative(mLanguage));
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.setAdapter(mAdapter);
+
+        new LoadPhrases(mPlace).execute();
 
     }
 
-    public String[] loadLangs(String language){
-        if(language.equals("rus")) return new String[]{language, "uzb"};
-        if(language.equals("uzb")) return new String[]{language, "rus"};
-        return new String[]{"rus", "uzb", language};
+    public boolean isNative(String language){
+        if (language.equals("rus") || language.equals("uzb")) return true;
+        return false;
     }
 
-    public ArrayList<Phrases> getData(String table, String[] args){
+    public ArrayList<Phrases> getData(String table){
         ArrayList<Phrases> arrayList = new ArrayList<>();
-        DatabasePhrases database = new DatabasePhrases(getActivity(), table, args);
+        DatabasePhrases database = new DatabasePhrases(getActivity(), table);
         Cursor names = database.getNames();
         while (!names.isAfterLast()){
             Phrases item = new Phrases();
@@ -86,17 +89,15 @@ public class PhrasesFragment extends Fragment {
 
     private class LoadPhrases extends AsyncTask<Void, Void, ArrayList<Phrases>>{
 
-        private String[] args;
         private String table;
 
-        public LoadPhrases(String[] args, String table){
-            this.args = args;
+        public LoadPhrases(String table){
             this.table = table;
         }
 
         @Override
         protected ArrayList<Phrases> doInBackground(Void... params) {
-            return getData(table, args);
+            return getData(table);
         }
 
         @Override
