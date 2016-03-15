@@ -25,14 +25,14 @@ import com.example.vladimir.uzbekistanexplorer.entity.MainItem;
 
 import java.util.ArrayList;
 
-public class MainPagerItem extends Fragment {
+public class MainPagerFragment extends Fragment {
 
     String current_language;
     int signature;
     BroadcastReceiver broadcastReceiver;
     TextView mText;
 
-    public MainPagerItem(){}
+    public MainPagerFragment(){}
 
     @Nullable
     @Override
