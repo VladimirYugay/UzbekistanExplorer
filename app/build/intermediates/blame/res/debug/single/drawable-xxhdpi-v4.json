@@ -12,10 +12,6 @@
         "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xxhdpi\\abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_geo_fence_48.png",
-        "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-xxhdpi\\ic_geo_fence_48.png"
-    },
-    {
         "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png",
         "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xxhdpi\\abc_scrubber_control_off_mtrl_alpha.png"
     },
@@ -64,16 +60,16 @@
         "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-xxhdpi\\ic_arrow_back_white_24dp.png"
     },
     {
-        "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png",
-        "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xxhdpi\\abc_spinner_mtrl_am_alpha.9.png"
+        "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_clear_mtrl_alpha.png",
+        "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xxhdpi\\abc_ic_clear_mtrl_alpha.png"
     },
     {
         "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_launcher.png",
         "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_clear_mtrl_alpha.png",
-        "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xxhdpi\\abc_ic_clear_mtrl_alpha.png"
+        "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png",
+        "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xxhdpi\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png",
@@ -82,10 +78,6 @@
     {
         "merged": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png",
         "source": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xxhdpi\\abc_ic_menu_copy_mtrl_am_alpha.png"
-    },
-    {
-        "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_geo_fence_96.png",
-        "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-xxhdpi\\ic_geo_fence_96.png"
     },
     {
         "merged": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_textfield_default_mtrl_alpha.9.png",
@@ -112,14 +104,6 @@
         "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xxhdpi\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
-        "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_handshake_96.png",
-        "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-xxhdpi\\ic_handshake_96.png"
-    },
-    {
-        "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_receipt_white_24dp.png",
-        "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-xxhdpi\\ic_receipt_white_24dp.png"
-    },
-    {
         "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\fab_bg_mini.png",
         "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.getbase\\floatingactionbutton\\1.10.0\\res\\drawable-xxhdpi-v4\\fab_bg_mini.png"
     },
@@ -140,32 +124,24 @@
         "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xxhdpi\\abc_textfield_search_default_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_go_search_api_mtrl_alpha.png",
-        "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xxhdpi\\abc_ic_go_search_api_mtrl_alpha.png"
+        "merged": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png",
+        "source": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xxhdpi\\abc_cab_background_top_mtrl_alpha.9.png"
     },
     {
         "merged": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png",
         "source": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xxhdpi\\abc_list_selector_disabled_holo_dark.9.png"
     },
     {
-        "merged": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png",
-        "source": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xxhdpi\\abc_cab_background_top_mtrl_alpha.9.png"
+        "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_go_search_api_mtrl_alpha.png",
+        "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xxhdpi\\abc_ic_go_search_api_mtrl_alpha.png"
     },
     {
         "merged": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png",
         "source": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xxhdpi\\abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_book_96.png",
-        "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-xxhdpi\\ic_book_96.png"
-    },
-    {
         "merged": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_geo_fence_96.png",
         "source": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-xxhdpi\\ic_geo_fence_96.png"
-    },
-    {
-        "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_meeting_48.png",
-        "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-xxhdpi\\ic_meeting_48.png"
     },
     {
         "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png",
@@ -448,20 +424,12 @@
         "source": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-xxhdpi\\ic_receipt_white_24dp.png"
     },
     {
-        "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_hotel_white_24dp.png",
-        "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-xxhdpi\\ic_hotel_white_24dp.png"
-    },
-    {
         "merged": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_search_api_mtrl_alpha.png",
         "source": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xxhdpi\\abc_ic_search_api_mtrl_alpha.png"
     },
     {
         "merged": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\fab_bg_normal.png",
         "source": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.getbase\\floatingactionbutton\\1.10.0\\res\\drawable-xxhdpi-v4\\fab_bg_normal.png"
-    },
-    {
-        "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_idea_48.png",
-        "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-xxhdpi\\ic_idea_48.png"
     },
     {
         "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\fab_bg_normal.png",

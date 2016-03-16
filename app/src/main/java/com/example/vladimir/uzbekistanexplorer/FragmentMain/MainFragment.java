@@ -58,7 +58,6 @@ public class MainFragment extends Fragment {
 
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences(Constants.APP_SETTINGS, Context.MODE_PRIVATE);
         mLanguage = sharedPreferences.getString(Constants.LANGUAGE, null);
-        String answer = mLanguage;
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getActivity().getWindow();

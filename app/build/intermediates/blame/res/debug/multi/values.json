@@ -9241,7 +9241,14 @@
                     "endOffset": 6667
                 },
                 "from": {
-                    "file": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\values\\colors.xml"
+                    "file": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 245,
+                        "endColumn": 51,
+                        "endOffset": 292
+                    }
                 }
             },
             {
@@ -12409,14 +12416,7 @@
                     "endOffset": 48843
                 },
                 "from": {
-                    "file": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 8,
-                        "startColumn": 4,
-                        "startOffset": 370,
-                        "endColumn": 42,
-                        "endOffset": 408
-                    }
+                    "file": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {

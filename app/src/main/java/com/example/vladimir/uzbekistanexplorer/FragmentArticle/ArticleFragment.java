@@ -1,6 +1,5 @@
 package com.example.vladimir.uzbekistanexplorer.FragmentArticle;
 
-import android.annotation.SuppressLint;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -23,7 +22,7 @@ import com.squareup.picasso.Picasso;
 
 public class ArticleFragment extends Fragment {
 
-    String name, images, description;
+    String mName, mImages, mDescription;
     String[] mList;
 
     public ArticleFragment(){}
@@ -37,14 +36,15 @@ public class ArticleFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        name = getArguments().getString("NAME");
-        description = getArguments().getString("DESCRIPTION");
-        images = getArguments().getString("IMAGES");
         return inflater.inflate(R.layout.fragment_article, container, false);
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+
+        mName = getArguments().getString("NAME");
+        mDescription = getArguments().getString("DESCRIPTION");
+        mImages = getArguments().getString("IMAGES");
 
         Toolbar toolbar = (Toolbar)view.findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
@@ -54,7 +54,7 @@ public class ArticleFragment extends Fragment {
                 getActivity().getSupportFragmentManager().popBackStackImmediate();
             }
         });
-        toolbar.setTitle(name);
+        toolbar.setTitle(mName);
 
         CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout)view.findViewById(R.id.collapsing_toolbar);
         collapsingToolbarLayout.setTitleEnabled(false);
@@ -66,13 +66,13 @@ public class ArticleFragment extends Fragment {
         }
 
         ImageView imageView = (ImageView)view.findViewById(R.id.backdrop);
-        if(images != null) mList = images.split(" ");
-        else mList = new String[]{"amir_square1"};
+        if(mImages != null) mList = mImages.split(" ");
+        else mList = new String[]{"amir_square1", "amir_square1"};
         String imageAddress = "file:///android_asset/images_for_article/" + mList[1] + ".jpg";
         Picasso.with(getContext()).load(imageAddress).into(imageView);
 
         TextView mText = (TextView)view.findViewById(R.id.text);
-        mText.setText(description);
+        mText.setText(mDescription);
 
         FloatingActionButton floatingActionButton = (FloatingActionButton)view.findViewById(R.id.fab);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
@@ -82,7 +82,7 @@ public class ArticleFragment extends Fragment {
                 GalleryFragment fragment = new GalleryFragment();
                 Bundle bundle = new Bundle();
                 bundle.putStringArray("IMAGES", mList);
-                bundle.putString("NAME", name);
+                bundle.putString("NAME", mName);
                 fragment.setArguments(bundle);
                 activity.changeFragment(fragment);
             }

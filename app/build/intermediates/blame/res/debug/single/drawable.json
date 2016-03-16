@@ -144,10 +144,6 @@
         "source": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\drawable\\design_fab_background.xml"
     },
     {
-        "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common.png",
-        "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable\\common.png"
-    },
-    {
         "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
         "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_spinner_textfield_background_material.xml"
     },

@@ -28,12 +28,12 @@
         "source": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-mdpi\\abc_btn_rating_star_on_mtrl_alpha.png"
     },
     {
-        "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_moreoverflow_mtrl_alpha.png",
-        "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-mdpi\\abc_ic_menu_moreoverflow_mtrl_alpha.png"
-    },
-    {
         "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_dark.9.png",
         "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-mdpi\\abc_list_selector_disabled_holo_dark.9.png"
+    },
+    {
+        "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_moreoverflow_mtrl_alpha.png",
+        "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-mdpi\\abc_ic_menu_moreoverflow_mtrl_alpha.png"
     },
     {
         "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_textfield_default_mtrl_alpha.9.png",
@@ -76,12 +76,12 @@
         "source": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_divider_mtrl_alpha.9.png",
-        "source": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-mdpi\\abc_list_divider_mtrl_alpha.9.png"
-    },
-    {
         "merged": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_voice_search_api_mtrl_alpha.png",
         "source": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-mdpi\\abc_ic_voice_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_divider_mtrl_alpha.9.png",
+        "source": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-mdpi\\abc_list_divider_mtrl_alpha.9.png"
     },
     {
         "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png",
@@ -104,20 +104,16 @@
         "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-mdpi\\abc_btn_check_to_on_mtrl_000.png"
     },
     {
-        "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_book_96.png",
-        "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-mdpi\\ic_book_96.png"
-    },
-    {
         "merged": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_geo_fence_96.png",
         "source": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-mdpi\\ic_geo_fence_96.png"
     },
     {
-        "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png",
-        "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-mdpi\\abc_scrubber_track_mtrl_alpha.9.png"
-    },
-    {
         "merged": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png",
         "source": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-mdpi\\abc_scrubber_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png",
+        "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-mdpi\\abc_scrubber_track_mtrl_alpha.9.png"
     },
     {
         "merged": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_meeting_48.png",
@@ -126,10 +122,6 @@
     {
         "merged": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_clear_mtrl_alpha.png",
         "source": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-mdpi\\abc_ic_clear_mtrl_alpha.png"
-    },
-    {
-        "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_hotel_white_24dp.png",
-        "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-mdpi\\ic_hotel_white_24dp.png"
     },
     {
         "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_focused_holo.9.png",
@@ -160,10 +152,6 @@
         "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-mdpi\\abc_ic_voice_search_api_mtrl_alpha.png"
     },
     {
-        "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_receipt_white_24dp.png",
-        "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-mdpi\\ic_receipt_white_24dp.png"
-    },
-    {
         "merged": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_language_white_24dp.png",
         "source": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-mdpi\\ic_language_white_24dp.png"
     },
@@ -190,10 +178,6 @@
     {
         "merged": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_handshake_96.png",
         "source": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-mdpi\\ic_handshake_96.png"
-    },
-    {
-        "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_idea_48.png",
-        "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-mdpi\\ic_idea_48.png"
     },
     {
         "merged": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png",
@@ -328,10 +312,6 @@
         "source": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-mdpi\\abc_textfield_search_activated_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_handshake_96.png",
-        "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-mdpi\\ic_handshake_96.png"
-    },
-    {
         "merged": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_idea_48.png",
         "source": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-mdpi\\ic_idea_48.png"
     },
@@ -350,10 +330,6 @@
     {
         "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_lightbulb_outline_white_24dp.png",
         "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-mdpi\\ic_lightbulb_outline_white_24dp.png"
-    },
-    {
-        "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_geo_fence_96.png",
-        "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-mdpi\\ic_geo_fence_96.png"
     },
     {
         "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png",
@@ -416,10 +392,6 @@
         "source": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.getbase\\floatingactionbutton\\1.10.0\\res\\drawable-mdpi-v4\\fab_bg_mini.png"
     },
     {
-        "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_geo_fence_48.png",
-        "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-mdpi\\ic_geo_fence_48.png"
-    },
-    {
         "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_015.png",
         "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-mdpi\\abc_btn_check_to_on_mtrl_015.png"
     },
@@ -450,10 +422,6 @@
     {
         "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_language_white_24dp.png",
         "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-mdpi\\ic_language_white_24dp.png"
-    },
-    {
-        "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_meeting_48.png",
-        "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-mdpi\\ic_meeting_48.png"
     },
     {
         "merged": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_textfield_default_mtrl_alpha.9.png",

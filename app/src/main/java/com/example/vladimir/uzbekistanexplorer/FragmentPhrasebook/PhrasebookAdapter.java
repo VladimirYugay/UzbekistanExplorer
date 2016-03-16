@@ -17,6 +17,8 @@ public class PhrasebookAdapter extends RecyclerView.Adapter<PhrasebookAdapter.Vi
 
     String language;
     String[] places, places_codes;
+    int[] mLogos = {R.drawable.phrases_common, R.drawable.phrases_hotel, R.drawable.phrases_shop, R.drawable.phrases_money,
+            R.drawable.phrases_museum, R.drawable.phrases_restaurant, R.drawable.phrases_transport};
 
     public PhrasebookAdapter(String language, String[] places){
         this.language = language;
@@ -45,6 +47,8 @@ public class PhrasebookAdapter extends RecyclerView.Adapter<PhrasebookAdapter.Vi
                 activity.changeFragment(fragment);
             }
         });
+
+        holder.mImage.setImageResource(mLogos[position]);
     }
 
     @Override

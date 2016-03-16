@@ -20,12 +20,12 @@
         "source": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\layout\\fragment_main.xml"
     },
     {
-        "merged": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
-        "source": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_alert_dialog_material.xml"
-    },
-    {
         "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_recycler_tips.xml",
         "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\layout\\item_recycler_tips.xml"
+    },
+    {
+        "merged": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
+        "source": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_alert_dialog_material.xml"
     },
     {
         "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_subheader.xml",
