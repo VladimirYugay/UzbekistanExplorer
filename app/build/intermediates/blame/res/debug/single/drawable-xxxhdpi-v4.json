@@ -264,6 +264,10 @@
         "source": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_geo_fence_48.png"
     },
     {
+        "merged": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\ic_location_on_white_24dp.png",
+        "source": "D:\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_location_on_white_24dp.png"
+    },
+    {
         "merged": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\ic_food_48.png",
         "source": "D:\\media\\vladimir\\2FFD1E60713CB27F\\Developing\\Android\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_food_48.png"
     },

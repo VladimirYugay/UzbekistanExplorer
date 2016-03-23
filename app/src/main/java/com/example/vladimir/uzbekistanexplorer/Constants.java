@@ -10,6 +10,8 @@ public class Constants {
     public static final String CITY = "City";
     public static final String PREFIX = "Prefix";
     public static final String TITLE = "Title";
+    public static final String IMAGE = "Title";
+    public static final String POSITION = "Title";
 
     public static final int MULTI_LANG = 0;
     public static final int MONO_LANG = 1;

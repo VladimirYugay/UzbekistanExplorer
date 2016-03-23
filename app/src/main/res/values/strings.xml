@@ -3,6 +3,7 @@
     <string name="action_back">Back</string>
     <string name="action_language">Language</string>
     <string name="action_tip">Tips</string>
+    <string name="action_map">Location</string>
     <string name="rus_phrasebook">Разговорник</string>
     <string name="eng_phrasebook">Phrasebook</string>
     <string name="rus_tips">Подсказки</string>

@@ -87,23 +87,6 @@ public class MainPagerFragment extends Fragment {
         super.onPause();
     }
 
-    public ArrayList<MainItem> getData(String language){
-        String code = "main_" + language;
-        ArrayList<MainItem> arrayList = new ArrayList<>();
-        DatabaseMain database = new DatabaseMain(getActivity(), code);
-        Cursor names = database.getNames();
-        while (!names.isAfterLast()){
-            MainItem item = new MainItem();
-            item.setCity(names.getString(1));
-            item.setDescription(names.getString(2));
-            item.setNick(names.getString(3));
-            arrayList.add(item);
-            names.moveToNext();
-        }
-        database.close();
-        names.close();
-        return arrayList;
-    }
 
     private class LoadData extends AsyncTask<Void, Void, ArrayList<MainItem>>{
         String lang;
@@ -111,6 +94,24 @@ public class MainPagerFragment extends Fragment {
         protected LoadData(String lang, int signature){
             this.lang = lang;
             this.signature = signature;
+        }
+
+        public ArrayList<MainItem> getData(String language){
+            String code = "main_" + language;
+            ArrayList<MainItem> arrayList = new ArrayList<>();
+            DatabaseMain database = new DatabaseMain(getActivity(), code);
+            Cursor names = database.getNames();
+            while (!names.isAfterLast()){
+                MainItem item = new MainItem();
+                item.setCity(names.getString(1));
+                item.setDescription(names.getString(2));
+                item.setNick(names.getString(3));
+                arrayList.add(item);
+                names.moveToNext();
+            }
+            database.close();
+            names.close();
+            return arrayList;
         }
 
         @Override

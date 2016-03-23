@@ -1,6 +1,7 @@
 package com.example.vladimir.uzbekistanexplorer.FragmentPhrasebook;
 
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,18 +12,21 @@ import android.widget.TextView;
 import com.example.vladimir.uzbekistanexplorer.Constants;
 import com.example.vladimir.uzbekistanexplorer.MainActivity;
 import com.example.vladimir.uzbekistanexplorer.R;
+import com.squareup.picasso.Picasso;
 
 
 public class PhrasebookAdapter extends RecyclerView.Adapter<PhrasebookAdapter.ViewHolder>{
 
     String language;
     String[] places, places_codes;
+    FragmentActivity mContext;
     int[] mLogos = {R.drawable.phrases_common, R.drawable.phrases_hotel, R.drawable.phrases_shop, R.drawable.phrases_money,
             R.drawable.phrases_museum, R.drawable.phrases_restaurant, R.drawable.phrases_transport};
 
-    public PhrasebookAdapter(String language, String[] places){
+    public PhrasebookAdapter(String language, String[] places, FragmentActivity activity){
         this.language = language;
         this.places = places;
+        mContext = activity;
     }
 
     @Override
@@ -48,7 +52,8 @@ public class PhrasebookAdapter extends RecyclerView.Adapter<PhrasebookAdapter.Vi
             }
         });
 
-        holder.mImage.setImageResource(mLogos[position]);
+        Picasso.with(mContext).load(mLogos[position]).into(holder.mImage);
+
     }
 
     @Override

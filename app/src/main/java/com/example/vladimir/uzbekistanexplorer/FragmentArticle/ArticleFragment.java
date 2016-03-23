@@ -1,5 +1,7 @@
 package com.example.vladimir.uzbekistanexplorer.FragmentArticle;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,17 +9,25 @@ import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.vladimir.uzbekistanexplorer.FragmentHints.HintsFragment;
 import com.example.vladimir.uzbekistanexplorer.MainActivity;
 import com.example.vladimir.uzbekistanexplorer.R;
 import com.squareup.picasso.Picasso;
+
+import java.util.Locale;
 
 
 public class ArticleFragment extends Fragment {
@@ -27,10 +37,10 @@ public class ArticleFragment extends Fragment {
 
     public ArticleFragment(){}
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
     }
 
     @Nullable
@@ -55,6 +65,18 @@ public class ArticleFragment extends Fragment {
             }
         });
         toolbar.setTitle(mName);
+        toolbar.inflateMenu(R.menu.item_menu);
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                if(item.getItemId() == R.id.location){
+                    String uri = "geo:0,0?q=" + mName;
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+                    getActivity().startActivity(intent);
+                }
+                return false;
+            }
+        });
 
         CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout)view.findViewById(R.id.collapsing_toolbar);
         collapsingToolbarLayout.setTitleEnabled(false);
@@ -87,6 +109,5 @@ public class ArticleFragment extends Fragment {
                 activity.changeFragment(fragment);
             }
         });
-
     }
 }

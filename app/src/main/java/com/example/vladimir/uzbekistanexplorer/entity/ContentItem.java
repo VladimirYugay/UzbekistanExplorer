@@ -3,7 +3,15 @@ package com.example.vladimir.uzbekistanexplorer.entity;
 
 public class ContentItem {
 
-    private   String name, description, address, image, images;
+    private   String name, description, address, image, images, map;
+
+    public void setMap(String map) {
+        this.map = map;
+    }
+
+    public String getMap() {
+        return map;
+    }
 
     public void setName(String name){
         this.name = name;

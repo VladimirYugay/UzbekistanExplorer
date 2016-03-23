@@ -9,6 +9,8 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -26,6 +28,11 @@ public class GalleryFragment extends Fragment{
     private String name = null;
 
     public GalleryFragment(){}
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
 
     @Nullable
     @Override
@@ -58,7 +65,6 @@ public class GalleryFragment extends Fragment{
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(new RecyclerAdapter());
     }
-
 
     private class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder>{
         @Override

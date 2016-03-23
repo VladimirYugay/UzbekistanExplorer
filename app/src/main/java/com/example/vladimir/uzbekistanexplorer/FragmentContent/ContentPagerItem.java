@@ -10,6 +10,8 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -27,6 +29,11 @@ public class ContentPagerItem extends Fragment{
 
 
     public ContentPagerItem(){}
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
 
     @Nullable
     @Override
@@ -50,6 +57,7 @@ public class ContentPagerItem extends Fragment{
         mRecycler.setAdapter(mAdapter);
     }
 
+
     private class LoadData extends AsyncTask<Void, Void, ArrayList<ContentItem>>{
 
         String dbPrefix, city, current_lang;
@@ -57,6 +65,25 @@ public class ContentPagerItem extends Fragment{
             this.dbPrefix = dbPrefix;
             this.city = city;
             this.current_lang = current_lang;
+        }
+
+        private ArrayList<ContentItem> getData(String dbPrefix, String city, String current_lang){
+            ArrayList<ContentItem> arrayList = new ArrayList<>();
+            DatabaseContent database = new DatabaseContent(getActivity(), dbPrefix, city, current_lang);
+            Cursor names = database.getNames();
+            while (!names.isAfterLast()){
+                ContentItem item = new ContentItem();
+                item.setName(names.getString(1));
+                item.setDescription(names.getString(2));
+                item.setAddress(names.getString(3));
+                item.setImage(names.getString(4));
+                item.setImages(names.getString(5));
+                arrayList.add(item);
+                names.moveToNext();
+            }
+            database.close();
+            names.close();
+            return arrayList;
         }
 
         @Override
@@ -69,22 +96,5 @@ public class ContentPagerItem extends Fragment{
             mAdapter.addAll(arrayList);
         }
     }
-    private ArrayList<ContentItem> getData(String dbPrefix, String city, String current_lang){
-        ArrayList<ContentItem> arrayList = new ArrayList<>();
-        DatabaseContent database = new DatabaseContent(getActivity(), dbPrefix, city, current_lang);
-        Cursor names = database.getNames();
-        while (!names.isAfterLast()){
-            ContentItem item = new ContentItem();
-            item.setName(names.getString(1));
-            item.setDescription(names.getString(2));
-            item.setAddress(names.getString(3));
-            item.setImage(names.getString(4));
-            item.setImages(names.getString(5));
-            arrayList.add(item);
-            names.moveToNext();
-        }
-        database.close();
-        names.close();
-        return arrayList;
-    }
+
 }

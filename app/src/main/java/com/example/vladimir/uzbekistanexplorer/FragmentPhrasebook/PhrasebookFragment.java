@@ -47,7 +47,7 @@ public class PhrasebookFragment extends Fragment {
 
         RecyclerView mRecycler = (RecyclerView)view.findViewById(R.id.recycler);
         mRecycler.setLayoutManager(new GridLayoutManager(getActivity(), 3));
-        mRecycler.setAdapter(new PhrasebookAdapter(mLanguage, getPlaces(mLanguage)));
+        mRecycler.setAdapter(new PhrasebookAdapter(mLanguage, getPlaces(mLanguage), getActivity()));
     }
 
 

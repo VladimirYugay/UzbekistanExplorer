@@ -20,10 +20,15 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.davemorrissey.labs.subscaleview.ImageSource;
 import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView;
+import com.example.vladimir.uzbekistanexplorer.Constants;
 import com.example.vladimir.uzbekistanexplorer.DepthPageTransformer;
+import com.example.vladimir.uzbekistanexplorer.MainActivity;
 import com.example.vladimir.uzbekistanexplorer.R;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import uk.co.senab.photoview.PhotoView;
 
@@ -52,23 +57,28 @@ public class GalleryItemFragment extends Fragment{
         }
 
         ViewPager viewPager = (ViewPager)view.findViewById(R.id.container);
-        viewPager.setAdapter(new SectionPagerAdapter(getChildFragmentManager(), mImages));
+        viewPager.setAdapter(new SectionsPagerAdapter(getChildFragmentManager(), mImages));
         viewPager.setCurrentItem(mPosition);
         viewPager.setPageTransformer(false, new DepthPageTransformer());
     }
 
-    private class SectionPagerAdapter extends FragmentPagerAdapter{
+    public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-        private String[] mImages;
+        String[] mImages;
 
-        public SectionPagerAdapter(FragmentManager fm, String[] images) {
+        public SectionsPagerAdapter(FragmentManager fm, String[] images) {
             super(fm);
             mImages = images;
         }
 
         @Override
         public Fragment getItem(int position) {
-            return PlaceholderFragment.newInstance(position, mImages[position]);
+            Bundle bundle = new Bundle();
+            bundle.putInt(Constants.POSITION, position);
+            bundle.putString(Constants.IMAGE, mImages[position]);
+            PlaceholderFragment fragment = new PlaceholderFragment();
+            fragment.setArguments(bundle);
+            return fragment;
         }
 
         @Override
@@ -78,38 +88,26 @@ public class GalleryItemFragment extends Fragment{
     }
 
     public static class PlaceholderFragment extends Fragment {
-
         String url;
-        int position;
-        private static final String ARG_SECTION_NUMBER = "section_number";
-        private static final String ARG_IMG_URL = "image_url";
+        int pos;
 
         public PlaceholderFragment() {
         }
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.image_view, container, false);
-            ImageView imageView = (ImageView)rootView.findViewById(R.id.image);
-            String imageAddress = "file:///android_asset/images_for_article/" + url + ".jpg";
-            Picasso.with(getActivity()).load(imageAddress).into(imageView);
-            return rootView;
+            url = getArguments().getString(Constants.IMAGE);
+            pos = getArguments().getInt(Constants.POSITION);
+            return inflater.inflate(R.layout.image_view, container, false);
         }
+
 
         @Override
-        public void setArguments(Bundle args) {
-            super.setArguments(args);
-            this.position = args.getInt(ARG_SECTION_NUMBER);
-            this.url = args.getString(ARG_IMG_URL);
-        }
-
-        public static PlaceholderFragment newInstance(int sectionNumber, String url) {
-            PlaceholderFragment fragment = new PlaceholderFragment();
-            Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-            args.putString(ARG_IMG_URL, url);
-            fragment.setArguments(args);
-            return fragment;
+        public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+            super.onViewCreated(view, savedInstanceState);
+            final ImageView imageView = (ImageView) view.findViewById(R.id.image);
+            String imageAddress = "file:///android_asset/images_for_article/" + url + ".jpg";
+            Picasso.with(getActivity()).load(imageAddress).into(imageView);
         }
     }
 }

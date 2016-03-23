@@ -1,5 +1,8 @@
 package com.example.vladimir.uzbekistanexplorer.FragmentContent;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -33,11 +36,25 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, final int position) {
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
         holder.mName.setText(mList.get(position).getName());
         holder.mAddress.setText(mList.get(position).getAddress());
         String imageAddress = "file:///android_asset/images/" + mList.get(position).getImage() + ".jpg";
         Picasso.with(holder.mImage.getContext()).load(imageAddress).into(holder.mImage);
+
+        holder.mImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity activity = (MainActivity) v.getContext();
+                Bundle bundle = new Bundle();
+                bundle.putString("IMAGES", mList.get(position).getImages());
+                bundle.putString("DESCRIPTION", mList.get(position).getDescription());
+                bundle.putString("NAME", mList.get(position).getName());
+                ArticleFragment fragment = new ArticleFragment();
+                fragment.setArguments(bundle);
+                activity.changeFragment(fragment);
+            }
+        });
 
         holder.mName.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +67,15 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                 ArticleFragment fragment = new ArticleFragment();
                 fragment.setArguments(bundle);
                 activity.changeFragment(fragment);
+            }
+        });
+
+        holder.mAddress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String uri = "geo:0,0?q=" + mList.get(position).getName();
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+                v.getContext().startActivity(intent);
             }
         });
     }

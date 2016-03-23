@@ -69,8 +69,26 @@ public class MainFragment extends Fragment {
         final String[] language_codes = getActivity().getResources().getStringArray(R.array.languages_codes);
         final String[] languages = getActivity().getResources().getStringArray(R.array.languages);
 
-        Toolbar mToolbar = (Toolbar)view.findViewById(R.id.toolbar);
-        ((AppCompatActivity) getActivity()).setSupportActionBar(mToolbar);
+        Toolbar toolbar = (Toolbar)view.findViewById(R.id.toolbar);
+        toolbar.inflateMenu(R.menu.main_menu);
+        toolbar.setTitle(getActivity().getResources().getString(R.string.app_name));
+        toolbar.setTitleTextColor(getActivity().getResources().getColor(R.color.white));
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.action_language:
+                        mDialog.show();
+                        break;
+                    default:
+                        HintsFragment fragment = new HintsFragment();
+                        MainActivity activity = (MainActivity) getActivity();
+                        activity.changeFragment(fragment);
+                }
+                return true;
+            }
+        });
+
 
         final ViewPager mPager = (ViewPager)view.findViewById(R.id.pager);
         mPager.setOffscreenPageLimit(3);
@@ -117,25 +135,6 @@ public class MainFragment extends Fragment {
         });
 
 
-    }
-
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.mian_menu, menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.action_language:
-                mDialog.show();
-                break;
-            default:
-                HintsFragment fragment = new HintsFragment();
-                MainActivity activity = (MainActivity) getActivity();
-                activity.changeFragment(fragment);
-        }
-        return true;
     }
 
     public void setupViewPager(ViewPager viewPager) {

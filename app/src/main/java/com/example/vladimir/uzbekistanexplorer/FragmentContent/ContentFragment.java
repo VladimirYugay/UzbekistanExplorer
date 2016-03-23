@@ -15,6 +15,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.view.ContextThemeWrapper;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -36,6 +38,11 @@ public class ContentFragment extends Fragment {
     SharedPreferences mPreferences;
 
     public ContentFragment(){}
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
 
     @Nullable
     @Override
@@ -83,7 +90,6 @@ public class ContentFragment extends Fragment {
         mTabLayout.setupWithViewPager(mPager);
         setupTabLayout(mTabLayout);
     }
-
 
     public void setupViewPager(ViewPager viewPager) {
         ContentPagerAdapter adapter = new ContentPagerAdapter(getChildFragmentManager());
@@ -148,7 +154,5 @@ public class ContentFragment extends Fragment {
         }
         Picasso.with(getContext()).load(imageAddress).into(mImage);
     }
-
-
 
 }

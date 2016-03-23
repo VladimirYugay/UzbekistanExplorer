@@ -2870,28 +2870,29 @@ containing a value of this type.
         public static final int ic_language_white_24dp=0x7f02004d;
         public static final int ic_launcher=0x7f02004e;
         public static final int ic_lightbulb_outline_white_24dp=0x7f02004f;
-        public static final int ic_map_marker_48=0x7f020050;
-        public static final int md_btn_selected=0x7f020051;
-        public static final int md_btn_selected_dark=0x7f020052;
-        public static final int md_btn_selector=0x7f020053;
-        public static final int md_btn_selector_dark=0x7f020054;
-        public static final int md_btn_selector_ripple=0x7f020055;
-        public static final int md_btn_selector_ripple_dark=0x7f020056;
-        public static final int md_btn_shape=0x7f020057;
-        public static final int md_item_selected=0x7f020058;
-        public static final int md_item_selected_dark=0x7f020059;
-        public static final int md_selector=0x7f02005a;
-        public static final int md_selector_dark=0x7f02005b;
-        public static final int md_transparent=0x7f02005c;
-        public static final int notification_template_icon_bg=0x7f020065;
-        public static final int photos=0x7f02005d;
-        public static final int phrases_common=0x7f02005e;
-        public static final int phrases_hotel=0x7f02005f;
-        public static final int phrases_money=0x7f020060;
-        public static final int phrases_museum=0x7f020061;
-        public static final int phrases_restaurant=0x7f020062;
-        public static final int phrases_shop=0x7f020063;
-        public static final int phrases_transport=0x7f020064;
+        public static final int ic_location_on_white_24dp=0x7f020050;
+        public static final int ic_map_marker_48=0x7f020051;
+        public static final int md_btn_selected=0x7f020052;
+        public static final int md_btn_selected_dark=0x7f020053;
+        public static final int md_btn_selector=0x7f020054;
+        public static final int md_btn_selector_dark=0x7f020055;
+        public static final int md_btn_selector_ripple=0x7f020056;
+        public static final int md_btn_selector_ripple_dark=0x7f020057;
+        public static final int md_btn_shape=0x7f020058;
+        public static final int md_item_selected=0x7f020059;
+        public static final int md_item_selected_dark=0x7f02005a;
+        public static final int md_selector=0x7f02005b;
+        public static final int md_selector_dark=0x7f02005c;
+        public static final int md_transparent=0x7f02005d;
+        public static final int notification_template_icon_bg=0x7f020066;
+        public static final int photos=0x7f02005e;
+        public static final int phrases_common=0x7f02005f;
+        public static final int phrases_hotel=0x7f020060;
+        public static final int phrases_money=0x7f020061;
+        public static final int phrases_museum=0x7f020062;
+        public static final int phrases_restaurant=0x7f020063;
+        public static final int phrases_shop=0x7f020064;
+        public static final int phrases_transport=0x7f020065;
     }
     public static final class id {
         public static final int action0=0x7f0d0096;
@@ -2904,13 +2905,13 @@ containing a value of this type.
         public static final int action_bar_title=0x7f0d0040;
         public static final int action_context_bar=0x7f0d0061;
         public static final int action_divider=0x7f0d009a;
-        public static final int action_language=0x7f0d00a7;
+        public static final int action_language=0x7f0d00a8;
         public static final int action_menu_divider=0x7f0d0002;
         public static final int action_menu_presenter=0x7f0d0003;
         public static final int action_mode_bar=0x7f0d005d;
         public static final int action_mode_bar_stub=0x7f0d005c;
         public static final int action_mode_close_button=0x7f0d0042;
-        public static final int action_tips=0x7f0d00a6;
+        public static final int action_tips=0x7f0d00a7;
         public static final int activity_chooser_view_content=0x7f0d0043;
         public static final int add=0x7f0d0037;
         public static final int address=0x7f0d0086;
@@ -2986,6 +2987,7 @@ containing a value of this type.
         public static final int line3=0x7f0d009f;
         public static final int listMode=0x7f0d0010;
         public static final int list_item=0x7f0d0047;
+        public static final int location=0x7f0d00a6;
         public static final int main_content=0x7f0d0077;
         public static final int media_actions=0x7f0d0099;
         public static final int middle=0x7f0d0034;
@@ -3157,7 +3159,8 @@ containing a value of this type.
         public static final int toolbar=0x7f040052;
     }
     public static final class menu {
-        public static final int mian_menu=0x7f0e0000;
+        public static final int item_menu=0x7f0e0000;
+        public static final int main_menu=0x7f0e0001;
     }
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;
@@ -3184,16 +3187,17 @@ containing a value of this type.
         public static final int abc_toolbar_collapse_description=0x7f060012;
         public static final int action_back=0x7f060014;
         public static final int action_language=0x7f060015;
-        public static final int action_tip=0x7f060016;
-        public static final int app_name=0x7f060017;
-        public static final int appbar_scrolling_view_behavior=0x7f060018;
-        public static final int character_counter_pattern=0x7f060019;
-        public static final int eng_phrasebook=0x7f06001a;
-        public static final int eng_tips=0x7f06001b;
-        public static final int rus_phrasebook=0x7f06001c;
-        public static final int rus_tips=0x7f06001d;
+        public static final int action_map=0x7f060016;
+        public static final int action_tip=0x7f060017;
+        public static final int app_name=0x7f060018;
+        public static final int appbar_scrolling_view_behavior=0x7f060019;
+        public static final int character_counter_pattern=0x7f06001a;
+        public static final int eng_phrasebook=0x7f06001b;
+        public static final int eng_tips=0x7f06001c;
+        public static final int rus_phrasebook=0x7f06001d;
+        public static final int rus_tips=0x7f06001e;
         public static final int status_bar_notification_info_overflow=0x7f060013;
-        public static final int title_activity_content=0x7f06001e;
+        public static final int title_activity_content=0x7f06001f;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f090082;
