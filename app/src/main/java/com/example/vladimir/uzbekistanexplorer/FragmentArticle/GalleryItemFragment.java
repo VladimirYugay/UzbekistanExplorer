@@ -1,34 +1,21 @@
 package com.example.vladimir.uzbekistanexplorer.FragmentArticle;
 
 
-import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
-import com.davemorrissey.labs.subscaleview.ImageSource;
-import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView;
 import com.example.vladimir.uzbekistanexplorer.Constants;
-import com.example.vladimir.uzbekistanexplorer.DepthPageTransformer;
-import com.example.vladimir.uzbekistanexplorer.MainActivity;
 import com.example.vladimir.uzbekistanexplorer.R;
 import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Target;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import uk.co.senab.photoview.PhotoView;
 
@@ -56,10 +43,10 @@ public class GalleryItemFragment extends Fragment{
             window.setStatusBarColor(getActivity().getResources().getColor(R.color.colorPrimaryDark));
         }
 
-        ViewPager viewPager = (ViewPager)view.findViewById(R.id.container);
+        HackyViewPager viewPager = (HackyViewPager)view.findViewById(R.id.container);
         viewPager.setAdapter(new SectionsPagerAdapter(getChildFragmentManager(), mImages));
         viewPager.setCurrentItem(mPosition);
-        viewPager.setPageTransformer(false, new DepthPageTransformer());
+//        viewPager.setPageTransformer(false, new DepthPageTransformer());
     }
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
@@ -105,8 +92,8 @@ public class GalleryItemFragment extends Fragment{
         @Override
         public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
             super.onViewCreated(view, savedInstanceState);
-            final ImageView imageView = (ImageView) view.findViewById(R.id.image);
-            String imageAddress = "file:///android_asset/images_for_article/" + url + ".jpg";
+            final String imageAddress = "file:///android_asset/images_for_article/" + url + ".jpg";
+            PhotoView imageView = (PhotoView)view.findViewById(R.id.imageView);
             Picasso.with(getActivity()).load(imageAddress).into(imageView);
         }
     }
