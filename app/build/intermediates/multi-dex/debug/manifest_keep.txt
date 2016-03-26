@@ -1,4 +1,5 @@
 -keep class com.example.vladimir.uzbekistanexplorer.MainActivity { <init>(); }
+-keep class com.example.vladimir.uzbekistanexplorer.Intro.IntroActivity { <init>(); }
 -keep public class * extends android.app.backup.BackupAgent {
     <init>();
 }

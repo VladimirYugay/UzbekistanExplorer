@@ -12,6 +12,7 @@ android/support/v4/media/session/MediaSessionCompat$MediaSessionImpl.class
 android/support/v7/widget/TintTypedArray.class
 android/support/v4/view/accessibility/AccessibilityEventCompat.class
 android/support/v7/app/AppCompatActivity.class
+com/github/paolorotolo/appintro/AppIntro$4.class
 android/support/v7/app/ActionBar$NavigationMode.class
 com/bumptech/glide/GenericRequestBuilder.class
 android/support/v4/app/BaseFragmentActivityDonut.class
@@ -30,9 +31,11 @@ android/support/v4/view/ViewCompat$HCViewCompatImpl.class
 android/support/v4/app/FragmentActivity.class
 android/support/design/widget/AppBarLayout$Behavior.class
 android/support/v4/media/MediaDescriptionCompat$Builder.class
+com/github/paolorotolo/appintro/DefaultIndicatorController.class
 android/support/v4/app/FragmentManager$OnBackStackChangedListener.class
 android/support/v4/widget/DrawerLayout$DrawerListener.class
 android/support/v7/widget/RecyclerView$State.class
+com/github/paolorotolo/appintro/PermissionObject.class
 android/support/design/widget/ViewOffsetBehavior.class
 android/support/v4/app/FragmentManagerImpl$FragmentTag.class
 com/getbase/floatingactionbutton/R$dimen.class
@@ -60,6 +63,7 @@ android/support/v4/app/TaskStackBuilder.class
 android/support/v4/app/NavUtils.class
 android/support/design/widget/AppBarLayout$ScrollingViewBehavior.class
 android/support/v7/widget/RecyclerView$1.class
+com/github/paolorotolo/appintro/ViewPageTransformer$TransformType.class
 android/support/v4/media/MediaBrowserCompat$ItemCallback.class
 android/support/v7/widget/ViewUtils.class
 android/support/v4/media/MediaBrowserCompat.class
@@ -68,7 +72,6 @@ android/support/design/widget/TabLayout$TabLayoutOnPageChangeListener.class
 android/support/v7/widget/RecyclerView$SmoothScroller.class
 android/support/v7/graphics/drawable/DrawerArrowDrawable$ArrowDirection.class
 android/support/v4/media/session/MediaSessionCompat$OnActiveChangeListener.class
-com/example/vladimir/uzbekistanexplorer/FragmentMain/MainFragment.class
 android/support/v7/app/ActionBar$OnNavigationListener.class
 android/support/v7/app/ActionBar$OnMenuVisibilityListener.class
 android/support/v7/widget/RecyclerView$OnItemTouchListener.class
@@ -85,11 +88,13 @@ android/support/v7/widget/ChildHelper$Callback.class
 android/support/v4/widget/MaterialProgressDrawable.class
 android/support/annotation/DrawableRes.class
 android/support/v7/recyclerview/R$styleable.class
+com/github/paolorotolo/appintro/AppIntro$TransformType.class
 android/support/v4/app/LoaderManager.class
 android/support/v4/view/animation/FastOutSlowInInterpolator.class
 com/bumptech/glide/load/DecodeFormat.class
 android/support/v4/widget/ScrollerCompat.class
 android/support/design/widget/TabLayout.class
+com/github/paolorotolo/appintro/ViewPageTransformer.class
 android/support/v4/app/BackStackState.class
 android/support/v7/widget/RecyclerView$RecycledViewPool.class
 android/support/v4/widget/SwipeRefreshLayout.class
@@ -117,6 +122,7 @@ uk/co/senab/photoview/PhotoViewAttacher.class
 com/getbase/floatingactionbutton/FloatingActionButton$1.class
 android/support/v4/view/ViewCompatKitKat.class
 android/support/design/widget/TabLayout$Tab.class
+com/github/paolorotolo/appintro/IndicatorController.class
 android/support/design/widget/ViewOffsetHelper.class
 android/support/design/widget/HeaderBehavior$FlingRunnable.class
 com/getbase/floatingactionbutton/R$styleable.class
@@ -203,17 +209,21 @@ android/support/v7/app/AppCompatCallback.class
 com/bumptech/glide/BitmapRequestBuilder.class
 android/support/v4/view/NestedScrollingChildHelper.class
 android/support/design/widget/TabLayout$1.class
+com/example/vladimir/uzbekistanexplorer/Intro/IntroActivity.class
 android/support/annotation/ArrayRes.class
 android/support/design/widget/Snackbar$4.class
 android/support/v4/view/ViewCompatJellybeanMr2.class
 android/support/v4/app/FragmentManagerImpl.class
 android/support/v7/widget/RecyclerView$ViewCacheExtension.class
+com/github/paolorotolo/appintro/AppIntro$2.class
 android/support/v4/media/session/PlaybackStateCompatApi21.class
 android/support/v4/view/LayoutInflaterFactory.class
 android/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo.class
+com/github/paolorotolo/appintro/ProgressIndicatorController.class
 android/support/v7/widget/RecyclerView$SavedState.class
 com/bumptech/glide/DrawableRequestBuilder.class
 android/support/annotation/StyleRes.class
+com/github/paolorotolo/appintro/R$layout.class
 android/support/v4/media/MediaMetadataCompat$1.class
 android/support/v7/widget/ChildHelper.class
 android/support/v4/view/MenuCompat.class
@@ -228,10 +238,13 @@ android/support/design/widget/Snackbar$Behavior.class
 android/support/v7/widget/RecyclerView$SimpleOnItemTouchListener.class
 android/support/v4/app/FragmentContainer.class
 android/support/v7/app/ActionBar$TabListener.class
+com/github/paolorotolo/appintro/AppIntro2.class
 android/support/design/widget/CoordinatorLayout$HierarchyChangeListener.class
+android/support/v4/view/ViewPager$PageTransformer.class
 android/support/design/widget/SwipeDismissBehavior$OnDismissListener.class
 android/support/design/widget/ViewUtils.class
 android/support/v4/media/MediaBrowserCompat$1.class
+com/example/vladimir/uzbekistanexplorer/Main/MainFragment.class
 android/support/v4/media/VolumeProviderCompat$1.class
 android/support/v7/widget/RecyclerView$LayoutParams.class
 android/support/v4/media/session/PlaybackStateCompat$State.class
@@ -250,6 +263,7 @@ android/support/v7/widget/ActionMenuView$LayoutParams.class
 android/support/annotation/InterpolatorRes.class
 android/support/design/widget/CoordinatorLayout$LayoutParams.class
 android/support/v4/content/PermissionChecker.class
+com/github/paolorotolo/appintro/R$id.class
 android/support/v4/app/BackStackRecord$TransitionState.class
 android/support/annotation/AnimRes.class
 android/support/v4/app/FragmentActivity$NonConfigurationInstances.class
@@ -270,6 +284,7 @@ android/support/design/widget/HeaderBehavior.class
 android/support/design/widget/ViewGroupUtils.class
 android/support/v4/app/Fragment$SavedState.class
 android/support/v4/media/session/MediaSessionCompat$1.class
+com/github/paolorotolo/appintro/AppIntro.class
 android/support/v4/media/session/PlaybackStateCompat$1.class
 android/support/v4/view/accessibility/AccessibilityNodeInfoCompat.class
 android/support/v4/app/FragmentManagerImpl$4.class
@@ -283,6 +298,7 @@ android/support/v7/widget/AdapterHelper$Callback.class
 android/support/annotation/AttrRes.class
 android/support/v4/view/NestedScrollingParent.class
 android/support/v4/media/session/PlaybackStateCompat$Builder.class
+com/example/vladimir/uzbekistanexplorer/Intro/IntroSlide.class
 android/support/v4/view/GravityCompat.class
 com/bumptech/glide/ListPreloader.class
 android/support/v4/media/session/PlaybackStateCompatApi22.class
@@ -311,6 +327,9 @@ android/support/annotation/Nullable.class
 android/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase.class
 android/support/design/R$dimen.class
 android/support/v4/media/MediaBrowserCompat$SubscriptionCallback.class
+com/github/paolorotolo/appintro/AppIntro$1.class
+com/github/paolorotolo/appintro/AppIntro$3.class
+com/github/paolorotolo/appintro/AppIntroViewPager.class
 android/support/annotation/VisibleForTesting.class
 android/support/v4/view/ViewCompatLollipop.class
 android/support/v7/widget/RecyclerView$ItemAnimator.class
@@ -350,6 +369,7 @@ android/support/v7/widget/RecyclerView$AdapterDataObserver.class
 android/support/v4/view/AccessibilityDelegateCompat.class
 android/support/v4/media/VolumeProviderCompat$ControlType.class
 android/support/design/widget/SnackbarManager$Callback.class
+com/github/paolorotolo/appintro/PagerAdapter.class
 android/support/design/widget/TabLayout$Mode.class
 android/support/design/widget/CoordinatorLayout$1.class
 android/support/annotation/FractionRes.class
@@ -361,6 +381,7 @@ android/support/v7/widget/RecyclerView$ItemAnimator$AdapterChanges.class
 com/squareup/picasso/Picasso.class
 android/support/v4/view/ViewCompat$ScrollIndicators.class
 android/support/design/R.class
+com/github/paolorotolo/appintro/R.class
 android/support/v4/media/session/MediaSessionCompat$Callback.class
 android/support/v7/view/menu/MenuItemImpl.class
 android/support/v4/content/LocalBroadcastManager.class
@@ -413,5 +434,6 @@ android/support/v4/content/PermissionChecker$PermissionResult.class
 com/bumptech/glide/RequestManager.class
 android/support/v4/app/ActivityCompat.class
 android/support/design/widget/Snackbar$8.class
+android/support/v4/app/FragmentPagerAdapter.class
 android/support/v4/app/FragmentActivity$1.class
 android/support/design/widget/AnimationUtils.class

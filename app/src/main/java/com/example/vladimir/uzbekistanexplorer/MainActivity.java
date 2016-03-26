@@ -13,7 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.example.vladimir.uzbekistanexplorer.FragmentMain.MainFragment;
+import com.example.vladimir.uzbekistanexplorer.Main.MainFragment;
 
 public class MainActivity extends AppCompatActivity {
 

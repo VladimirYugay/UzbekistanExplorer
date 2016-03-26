@@ -83,4 +83,5 @@
     </string-array>
 
     <string name="title_activity_content">ContentActivity</string>
+    <string name="title_activity_intro">IntroActivity</string>
 </resources>
