@@ -14,6 +14,7 @@ import com.example.vladimir.uzbekistanexplorer.Article.ArticleFragment;
 import com.example.vladimir.uzbekistanexplorer.MainActivity;
 import com.example.vladimir.uzbekistanexplorer.R;
 import com.example.vladimir.uzbekistanexplorer.entity.ContentItem;
+import com.github.amlcurran.showcaseview.ShowcaseView;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

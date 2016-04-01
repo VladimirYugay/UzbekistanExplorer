@@ -10,8 +10,10 @@ public class Constants {
     public static final String CITY = "City";
     public static final String PREFIX = "Prefix";
     public static final String TITLE = "Title";
-    public static final String IMAGE = "Title";
-    public static final String POSITION = "Title";
+    public static final String IMAGE = "Image";
+    public static final String POSITION = "Position";
 
-    public static final String IS_FIRST = "First";
+    public static final String IS_FIRST_MAIN = "FIRST_MAIN";
+    public static final String IS_FIRST_ARTICLE = "FIRST_ARTICLE";
+
 }

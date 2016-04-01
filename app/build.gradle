@@ -24,6 +24,11 @@ repositories {
     maven { url "https://jitpack.io" }
 }
 
+repositories {
+    jcenter()
+    maven { url "https://jitpack.io" }
+}
+
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -46,6 +51,11 @@ dependencies {
 
     compile 'com.commit451:PhotoView:1.2.4'
     compile 'com.github.paolorotolo:appintro:3.4.0'
+    compile 'com.github.amlcurran.showcaseview:library:5.4.1'
+    compile 'com.nineoldandroids:library:2.4.0'
+
+    compile 'com.github.deano2390:MaterialShowcaseView:1.1.0'
+
 }
 
 buildscript {

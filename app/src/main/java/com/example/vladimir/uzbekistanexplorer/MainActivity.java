@@ -85,6 +85,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         getSupportFragmentManager().popBackStackImmediate();
-        if(getSupportFragmentManager().getBackStackEntryCount() == 0) supportFinishAfterTransition();
+        if(getSupportFragmentManager().getBackStackEntryCount() == 0) super.onBackPressed();
     }
 }

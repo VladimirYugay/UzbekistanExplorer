@@ -7,4 +7,8 @@
     <dimen name="detail_backdrop_height">256dp</dimen>
     <dimen name="card_margin">16dp</dimen>
     <dimen name="list_item_avatar_size">40dp</dimen>
+
+    <dimen name="showcase_radius">40dp</dimen>
+    <dimen name="showcase_radius_inner">50dp</dimen>
+    <dimen name="showcase_radius_outer">60dp</dimen>
 </resources>

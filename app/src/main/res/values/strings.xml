@@ -84,4 +84,60 @@
 
     <string name="title_activity_content">ContentActivity</string>
     <string name="title_activity_intro">IntroActivity</string>
+
+
+
+
+
+
+    <string-array name="eng_intro_title">
+        <item>Language</item>
+        <item>Hints</item>
+        <item>Phrasebook</item>
+        <item>City</item>
+    </string-array>
+
+    <string-array name="eng_intro_description">
+        <item>Choose the language from the list</item>
+        <item>Use the expirience from insiders and tourists from all over the world</item>
+        <item>Use the capacious phrasebook for all life situations</item>
+        <item>Explroe the amazing places of the city</item>
+    </string-array>
+
+
+    <string-array name="rus_intro_title">
+        <item>Язык</item>
+        <item>Подсказки</item>
+        <item>Разговорник</item>
+        <item>Город</item>
+    </string-array>
+
+    <string-array name="rus_intro_description">
+        <item>Выберите язык из предложенного списка</item>
+        <item>Используйте опыт местных жителей и туристов со всего света</item>
+        <item>Общайтесь без границ с обширным разговорником для всех жизненных ситуаций</item>
+        <item>Узнайте о самых примечательных объектов этого города</item>
+    </string-array>
+
+    <string-array name="eng_article_title">
+        <item>Maps</item>
+        <item>Gallery</item>
+    </string-array>
+
+    <string-array name="rus_article_title">
+        <item>Карты</item>
+        <item>Галерея</item>
+    </string-array>
+
+    <string-array name="rus_article_description">
+        <item>Используйте удобный вам сервис чтобы найти объект (Некоторые объекты не отображаюся из-за несоответсвия карт)</item>
+        <item>Взгляните на эксклюзивную плдборку фотографий объекта</item>
+    </string-array>
+
+    <string-array name="eng_article_description">
+        <item>Use the maps services you like to find the object</item>
+        <item>Look through the exclusive gallery of the object</item>
+    </string-array>
+
+
 </resources>
