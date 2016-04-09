@@ -218,14 +218,23 @@ public class MainFragment extends Fragment{
 
     public void setupViewPager(ViewPager viewPager) {
         MainPagerAdapter adapter = new MainPagerAdapter(getChildFragmentManager());
-        for(int i = 0; i < 2; i++){
-            MainPagerFragment fragment = new MainPagerFragment();
-            Bundle bundle = new Bundle();
-            bundle.putString(Constants.LANGUAGE, mLanguage);
-            bundle.putInt(Constants.CITY_CODE, i);
-            fragment.setArguments(bundle);
-            adapter.addFrag(fragment, mArray[i]);
-        }
+
+        MainPagerFragment fragment = new MainPagerFragment();
+        Bundle bundle = new Bundle();
+        bundle.putString(Constants.LANGUAGE, mLanguage);
+        bundle.putInt(Constants.CITY_CODE, 0);
+        fragment.setArguments(bundle);
+        adapter.addFrag(fragment, mArray[0]);
+
+        MainPagerFragment fragment2 = new MainPagerFragment();
+        Bundle bundle2 = new Bundle();
+        bundle2.putString(Constants.LANGUAGE, mLanguage);
+        bundle2.putInt(Constants.CITY_CODE, 3);
+        fragment2.setArguments(bundle2);
+        adapter.addFrag(fragment2, mArray[3]);
+
+
+
         viewPager.setAdapter(adapter);
     }
 
@@ -237,8 +246,8 @@ public class MainFragment extends Fragment{
             case "eng":
                 mArray = getActivity().getResources().getStringArray(R.array.tabs_eng);
         }
-        for(int i = 0; i < 2; i++){
-            mTabLayout.getTabAt(i).setText(mArray[i]);
-        }
+        mTabLayout.getTabAt(0).setText(mArray[0]);
+        mTabLayout.getTabAt(1).setText(mArray[3]);
+
     }
 }

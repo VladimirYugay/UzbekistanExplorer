@@ -138,7 +138,7 @@ public class ContentFragment extends Fragment {
         String imageAddress = null;
         switch (position){
             case 0:
-                imageAddress = "file:///android_asset/images_for_article/amir_square4.jpg";
+                imageAddress = "file:///android_asset/images_for_article/tashkent_places_amirsquare4.jpg";
                 break;
             case 1:
                 break;

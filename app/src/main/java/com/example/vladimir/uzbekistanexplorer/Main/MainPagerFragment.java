@@ -22,22 +22,27 @@ import com.example.vladimir.uzbekistanexplorer.Content.ContentFragment;
 import com.example.vladimir.uzbekistanexplorer.MainActivity;
 import com.example.vladimir.uzbekistanexplorer.R;
 import com.example.vladimir.uzbekistanexplorer.entity.MainItem;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
 public class MainPagerFragment extends Fragment {
 
-    String current_language;
-    int signature;
-    BroadcastReceiver broadcastReceiver;
+    String mLanguage;
+    int mSignature;
+    BroadcastReceiver mBroadcastReceiver;
     TextView mText;
+    final String[] mImages = {"file:///android_asset/images_for_content/tashkent.jpg",
+            "file:///android_asset/images_for_content/tashkent.jpg",
+            "file:///android_asset/images_for_content/tashkent.jpg",
+            "file:///android_asset/images_for_content/tashkent.jpg", };
 
     public MainPagerFragment(){}
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_main_pager, container, false);
+        return inflater.inflate(R.layout.fragment_main_item, container, false);
     }
 
     @Override
@@ -45,45 +50,47 @@ public class MainPagerFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences(Constants.APP_SETTINGS, Context.MODE_PRIVATE);
-        current_language = sharedPreferences.getString(Constants.LANGUAGE, null);
-        signature = getArguments().getInt(Constants.CITY_CODE);
+        mLanguage = sharedPreferences.getString(Constants.LANGUAGE, null);
+        mSignature = getArguments().getInt(Constants.CITY_CODE);
 
         mText = (TextView)view.findViewById(R.id.text);
-        ImageView mImage = (ImageView)view.findViewById(R.id.image);
-        mImage.setOnClickListener(new View.OnClickListener() {
+        ImageView imageView = (ImageView)view.findViewById(R.id.image);
+        imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 MainActivity mainActivity = (MainActivity) getActivity();
                 ContentFragment fragment = new ContentFragment();
                 Bundle bundle = new Bundle();
-                bundle.putInt(Constants.CITY_CODE, signature);
+                bundle.putInt(Constants.CITY_CODE, mSignature);
                 fragment.setArguments(bundle);
                 mainActivity.changeFragment(fragment);
 
             }
         });
+        Picasso.with(getActivity()).load(mImages[mSignature]).fit().into(imageView);
 
-        new LoadData(current_language, signature).execute();
+
+        new LoadData(mLanguage, mSignature).execute();
     }
 
     @Override
     public void onResume() {
         IntentFilter intentFilter = new IntentFilter(Constants.UPDATE);
-        broadcastReceiver = new BroadcastReceiver() {
+        mBroadcastReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
                 final String lang = intent.getStringExtra(Constants.LANGUAGE);
-                    current_language = lang;
-                    new LoadData(current_language, signature).execute();
+                    mLanguage = lang;
+                    new LoadData(mLanguage, mSignature).execute();
                 }
         };
-        LocalBroadcastManager.getInstance(getActivity()).registerReceiver(broadcastReceiver, intentFilter);
+        LocalBroadcastManager.getInstance(getActivity()).registerReceiver(mBroadcastReceiver, intentFilter);
         super.onResume();
     }
 
     @Override
     public void onPause() {
-        LocalBroadcastManager.getInstance(getActivity()).unregisterReceiver(broadcastReceiver);
+        LocalBroadcastManager.getInstance(getActivity()).unregisterReceiver(mBroadcastReceiver);
         super.onPause();
     }
 

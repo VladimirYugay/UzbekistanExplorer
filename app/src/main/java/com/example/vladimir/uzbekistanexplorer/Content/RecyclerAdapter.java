@@ -39,7 +39,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     public void onBindViewHolder(final ViewHolder holder, final int position) {
         holder.mName.setText(mList.get(position).getName());
         holder.mAddress.setText(mList.get(position).getAddress());
-        String imageAddress = "file:///android_asset/images/" + mList.get(position).getImage() + ".jpg";
+        String imageAddress = "file:///android_asset/images_for_content/" + mList.get(position).getImage() + ".jpg";
         Picasso.with(holder.mImage.getContext()).load(imageAddress).into(holder.mImage);
 
         holder.mImage.setOnClickListener(new View.OnClickListener() {

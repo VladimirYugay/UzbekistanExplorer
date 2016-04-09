@@ -3191,7 +3191,7 @@ containing a value of this type.
         public static final int fragment_intro_item1=0x7f04002c;
         public static final int fragment_intro_item2=0x7f04002d;
         public static final int fragment_main=0x7f04002e;
-        public static final int fragment_main_pager=0x7f04002f;
+        public static final int fragment_main_item=0x7f04002f;
         public static final int fragment_tips=0x7f040030;
         public static final int grid_item=0x7f040031;
         public static final int handy=0x7f040032;

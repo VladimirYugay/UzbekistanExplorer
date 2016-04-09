@@ -1015,7 +1015,7 @@ int layout fragment_intro 0x7f04002b
 int layout fragment_intro_item1 0x7f04002c
 int layout fragment_intro_item2 0x7f04002d
 int layout fragment_main 0x7f04002e
-int layout fragment_main_pager 0x7f04002f
+int layout fragment_main_item 0x7f04002f
 int layout fragment_tips 0x7f040030
 int layout grid_item 0x7f040031
 int layout handy 0x7f040032
