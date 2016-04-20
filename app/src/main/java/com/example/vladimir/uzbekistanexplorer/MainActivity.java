@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.afollestad.materialdialogs.Theme;
 import com.example.vladimir.uzbekistanexplorer.Main.MainFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
         if(mLanguage == null && savedInstanceState == null){
             mDialog = new MaterialDialog.Builder(this)
                     .title("Choose the language")
+                    .backgroundColor(getResources().getColor(R.color.colorPrimary))
+                    .itemsColor(getResources().getColor(R.color.white))
+                    .titleColor(getResources().getColor(R.color.white))
                     .items(languages)
                     .itemsCallback(new MaterialDialog.ListCallback() {
                         @Override

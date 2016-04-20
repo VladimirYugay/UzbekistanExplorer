@@ -29,11 +29,11 @@ import java.util.ArrayList;
 public class MainPagerFragment extends Fragment {
 
     String mLanguage;
-    int mSignature;
+    int mCityCode;
     BroadcastReceiver mBroadcastReceiver;
     TextView mText;
     final String[] mImages = {"file:///android_asset/images_for_content/tashkent.jpg",
-            "file:///android_asset/images_for_content/tashkent.jpg",
+            "file:///android_asset/images_for_content/samarkand.jpg",
             "file:///android_asset/images_for_content/tashkent.jpg",
             "file:///android_asset/images_for_content/tashkent.jpg", };
 
@@ -51,7 +51,7 @@ public class MainPagerFragment extends Fragment {
 
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences(Constants.APP_SETTINGS, Context.MODE_PRIVATE);
         mLanguage = sharedPreferences.getString(Constants.LANGUAGE, null);
-        mSignature = getArguments().getInt(Constants.CITY_CODE);
+        mCityCode = getArguments().getInt(Constants.CITY_CODE);
 
         mText = (TextView)view.findViewById(R.id.text);
         ImageView imageView = (ImageView)view.findViewById(R.id.image);
@@ -61,16 +61,14 @@ public class MainPagerFragment extends Fragment {
                 MainActivity mainActivity = (MainActivity) getActivity();
                 ContentFragment fragment = new ContentFragment();
                 Bundle bundle = new Bundle();
-                bundle.putInt(Constants.CITY_CODE, mSignature);
+                bundle.putInt(Constants.CITY_CODE, mCityCode);
                 fragment.setArguments(bundle);
                 mainActivity.changeFragment(fragment);
 
             }
         });
-        Picasso.with(getActivity()).load(mImages[mSignature]).fit().into(imageView);
-
-
-        new LoadData(mLanguage, mSignature).execute();
+        Picasso.with(getActivity()).load(mImages[mCityCode]).fit().into(imageView);
+        new LoadData(mLanguage, mCityCode).execute();
     }
 
     @Override
@@ -81,7 +79,7 @@ public class MainPagerFragment extends Fragment {
             public void onReceive(Context context, Intent intent) {
                 final String lang = intent.getStringExtra(Constants.LANGUAGE);
                     mLanguage = lang;
-                    new LoadData(mLanguage, mSignature).execute();
+                    new LoadData(mLanguage, mCityCode).execute();
                 }
         };
         LocalBroadcastManager.getInstance(getActivity()).registerReceiver(mBroadcastReceiver, intentFilter);

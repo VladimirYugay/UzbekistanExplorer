@@ -25,8 +25,10 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.afollestad.materialdialogs.Theme;
 import com.example.vladimir.uzbekistanexplorer.Constants;
 import com.example.vladimir.uzbekistanexplorer.FABScrollBehavior;
 import com.example.vladimir.uzbekistanexplorer.Phrasebook.PhrasebookFragment;
@@ -89,6 +91,7 @@ public class MainFragment extends Fragment{
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.action_language:
+                        mDialog.setTitle(updateDialog(mLanguage));
                         mDialog.show();
                         break;
                     default:
@@ -109,9 +112,14 @@ public class MainFragment extends Fragment{
         mTabLayout.setupWithViewPager(mPager);
         updateTabs(mLanguage);
 
+
+
         mDialog = new MaterialDialog.Builder(getActivity())
-                .title("Choose the language")
+                .title(updateDialog(mLanguage))
                 .items(languages)
+                .backgroundColor(getActivity().getResources().getColor(R.color.colorPrimary))
+                .itemsColor(getActivity().getResources().getColor(R.color.white))
+                .titleColor(getActivity().getResources().getColor(R.color.white))
                 .itemsCallback(new MaterialDialog.ListCallback() {
                     @Override
                     public void onSelection(MaterialDialog materialDialog, View view, int i, CharSequence charSequence) {
@@ -229,11 +237,9 @@ public class MainFragment extends Fragment{
         MainPagerFragment fragment2 = new MainPagerFragment();
         Bundle bundle2 = new Bundle();
         bundle2.putString(Constants.LANGUAGE, mLanguage);
-        bundle2.putInt(Constants.CITY_CODE, 3);
+        bundle2.putInt(Constants.CITY_CODE, 1);
         fragment2.setArguments(bundle2);
-        adapter.addFrag(fragment2, mArray[3]);
-
-
+        adapter.addFrag(fragment2, mArray[1]);
 
         viewPager.setAdapter(adapter);
     }
@@ -246,8 +252,20 @@ public class MainFragment extends Fragment{
             case "eng":
                 mArray = getActivity().getResources().getStringArray(R.array.tabs_eng);
         }
-        mTabLayout.getTabAt(0).setText(mArray[0]);
-        mTabLayout.getTabAt(1).setText(mArray[3]);
+        for(int i = 0; i < 2; i++){
+            mTabLayout.getTabAt(i).setText(mArray[i]);
+        }
+    }
 
+
+    String updateDialog(String language){
+        switch (language){
+            case "rus":
+                return "Выберите язык";
+            case "eng":
+                return "Choose the language";
+            default:
+                return "Choose the language";
+        }
     }
 }
