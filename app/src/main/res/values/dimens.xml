@@ -12,5 +12,5 @@
     <dimen name="showcase_radius_inner">50dp</dimen>
     <dimen name="showcase_radius_outer">60dp</dimen>
 
-    <dimen name="article_text_size">18sp</dimen>
+    <dimen name="article_text_size">16sp</dimen>
 </resources>

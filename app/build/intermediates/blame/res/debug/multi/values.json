@@ -2638,7 +2638,14 @@
                     "endOffset": 43219
                 },
                 "from": {
-                    "file": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\values\\dimens.xml"
+                    "file": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 551,
+                        "endColumn": 48,
+                        "endOffset": 595
+                    }
                 }
             },
             {
@@ -4318,14 +4325,7 @@
                     "endOffset": 51384
                 },
                 "from": {
-                    "file": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 1,
-                        "startColumn": 4,
-                        "startOffset": 16,
-                        "endColumn": 48,
-                        "endOffset": 60
-                    }
+                    "file": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
