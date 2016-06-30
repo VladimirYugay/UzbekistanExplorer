@@ -22,12 +22,12 @@ public final class R {
 	}
 	public static final class dimen {
 		public static final int action_bar_offset = 0x7f08004c;
-		public static final int button_margin = 0x7f08004e;
-		public static final int showcase_radius = 0x7f08009e;
-		public static final int showcase_radius_inner = 0x7f08009f;
-		public static final int showcase_radius_material = 0x7f0800a0;
-		public static final int showcase_radius_outer = 0x7f0800a1;
-		public static final int text_padding = 0x7f0800a2;
+		public static final int button_margin = 0x7f08004f;
+		public static final int showcase_radius = 0x7f08009f;
+		public static final int showcase_radius_inner = 0x7f0800a0;
+		public static final int showcase_radius_material = 0x7f0800a1;
+		public static final int showcase_radius_outer = 0x7f0800a2;
+		public static final int text_padding = 0x7f0800a3;
 	}
 	public static final class drawable {
 		public static final int btn_cling_normal = 0x7f020045;
@@ -45,8 +45,8 @@ public final class R {
 		public static final int showcase_title_text = 0x7f0d000c;
 	}
 	public static final class layout {
-		public static final int handy = 0x7f040032;
-		public static final int showcase_button = 0x7f04005a;
+		public static final int handy = 0x7f04002f;
+		public static final int showcase_button = 0x7f040057;
 	}
 	public static final class string {
 		public static final int ok = 0x7f06002b;

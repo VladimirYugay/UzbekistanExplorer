@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">UzbekistanExplorer</string>
+    <string name="app_name">UzbExplorer</string>
     <string name="action_back">Back</string>
     <string name="action_language">Language</string>
     <string name="action_tip">Tips</string>

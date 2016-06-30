@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/src/main/jniLibs"/></dataSet><dataSet config="debug"><source path="/media/vladimir/2FFD1E60713CB27F/Developing/Android/AndroidStudioProjects/UzbekistanExplorer/app/src/debug/jniLibs"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\debug\jniLibs"/></dataSet></merger>
