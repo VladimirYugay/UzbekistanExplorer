@@ -1674,7 +1674,7 @@
     </string-array><string-array name="eng_article_title">
         <item>Maps</item>
         <item>Gallery</item>
-    </string-array><string name="eng_phrasebook">Phrasebook</string><string name="app_name">UzbExplorer</string><string name="title_activity_content">ContentActivity</string><string name="eng_tips">Hints</string><string-array name="tabs_rus">
+    </string-array><string name="eng_phrasebook">Phrasebook</string><string name="app_name">UzbekistanExplorer</string><string name="title_activity_content">ContentActivity</string><string name="eng_tips">Hints</string><string-array name="tabs_rus">
         <item>Ташкент</item>
         <item>Самарканд</item>
         <item>Бухара</item>

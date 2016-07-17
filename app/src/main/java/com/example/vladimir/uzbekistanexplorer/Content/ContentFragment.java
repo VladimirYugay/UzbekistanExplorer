@@ -140,11 +140,8 @@ public class ContentFragment extends Fragment {
             case 0:
                 imageAddress = "file:///android_asset/images_for_article/tashkent_places_amirsquare4.jpg";
                 break;
-            case 1:
-                break;
-            case 2:
-                break;
             default:
+                imageAddress = "file:///android_asset/images_for_content/sam_places_bibi10.jpg";
         }
         Picasso.with(getContext()).load(imageAddress).into(mImage);
     }
