@@ -11,6 +11,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +22,8 @@ import android.widget.ImageView;
 import com.example.vladimir.uzbekistanexplorer.Constants;
 import com.example.vladimir.uzbekistanexplorer.R;
 import com.squareup.picasso.Picasso;
+
+import java.io.IOException;
 
 public class ContentFragment extends Fragment {
 
@@ -135,7 +138,7 @@ public class ContentFragment extends Fragment {
     }
 
     public void updateImage(int position){
-        String imageAddress = null;
+        String imageAddress;
         switch (position){
             case 0:
                 imageAddress = "file:///android_asset/images_for_article/tashkent_places_amirsquare4.jpg";
