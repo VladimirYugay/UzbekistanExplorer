@@ -3,14 +3,23 @@ package com.example.vladimir.uzbekistanexplorer.entity;
 
 public class ContentItem {
 
-    private   String name, description, address, image, images, map;
+    private   String name, description, address, image, images;
+    private double lat, lon;
 
-    public void setMap(String map) {
-        this.map = map;
+    public void setLat(double lat){
+        this.lat = lat;
     }
 
-    public String getMap() {
-        return map;
+    public double getLat(){
+        return this.lat;
+    }
+
+    public void setLon(double lon){
+        this.lon = lon;
+    }
+
+    public double getLon(){
+        return this.lon;
     }
 
     public void setName(String name){

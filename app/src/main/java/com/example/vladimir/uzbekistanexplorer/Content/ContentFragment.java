@@ -34,7 +34,8 @@ public class ContentFragment extends Fragment {
     ImageView mImage;
     SharedPreferences mPreferences;
 
-    public ContentFragment(){}
+    public ContentFragment() {
+    }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -62,7 +63,7 @@ public class ContentFragment extends Fragment {
             window.setStatusBarColor(getActivity().getResources().getColor(R.color.transparent));
         }
 
-        mToolbar = (Toolbar)view.findViewById(R.id.toolbar);
+        mToolbar = (Toolbar) view.findViewById(R.id.toolbar);
         ((AppCompatActivity) getActivity()).setSupportActionBar(mToolbar);
         mToolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -73,25 +74,33 @@ public class ContentFragment extends Fragment {
         });
         updateToolbar(mCityCode, mLanguage);
 
-        final CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout)view.findViewById(R.id.collapse_toolbar);
+        final CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) view.findViewById(R.id.collapse_toolbar);
         collapsingToolbarLayout.setTitleEnabled(false);
 
-        ViewPager mPager = (ViewPager)view.findViewById(R.id.view_pager);
+        ViewPager mPager = (ViewPager) view.findViewById(R.id.view_pager);
         mPager.setOffscreenPageLimit(3);
         setupViewPager(mPager);
 
-        mImage = (ImageView)view.findViewById(R.id.header);
+        mImage = (ImageView) view.findViewById(R.id.header);
         updateImage(mCityCode);
 
-        mTabLayout = (TabLayout)view.findViewById(R.id.tab_layout);
+        mTabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
         mTabLayout.setupWithViewPager(mPager);
         setupTabLayout(mTabLayout);
+
+        try {
+            for (String file : getContext().getAssets().list("images_for_content/")) {
+                Log.v("ERROR", file);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void setupViewPager(ViewPager viewPager) {
         ContentPagerAdapter adapter = new ContentPagerAdapter(getChildFragmentManager());
         String[] array = getActivity().getResources().getStringArray(R.array.codes_activities);
-        for(int i = 0; i < 3; i++){
+        for (int i = 0; i < 3; i++) {
             Bundle bundle = new Bundle();
             bundle.putString(Constants.CITY, mCity);
             bundle.putString(Constants.PREFIX, array[i]);
@@ -102,16 +111,16 @@ public class ContentFragment extends Fragment {
         viewPager.setAdapter(adapter);
     }
 
-    public void setupTabLayout(TabLayout tabLayout){
-        if(tabLayout != null) {
+    public void setupTabLayout(TabLayout tabLayout) {
+        if (tabLayout != null) {
             tabLayout.getTabAt(0).setIcon(R.drawable.ic_map_marker_48);
             tabLayout.getTabAt(1).setIcon(R.drawable.ic_food_48);
             tabLayout.getTabAt(2).setIcon(R.drawable.ic_hotel_48);
         }
     }
 
-    public String getCityName(int i){
-        switch (i){
+    public String getCityName(int i) {
+        switch (i) {
             case 0:
                 return "tashkent";
             case 1:
@@ -123,9 +132,9 @@ public class ContentFragment extends Fragment {
         }
     }
 
-    public void updateToolbar(int position, String lang){
+    public void updateToolbar(int position, String lang) {
         String[] array = getActivity().getResources().getStringArray(R.array.tabs_rus);
-        if(lang != null) {
+        if (lang != null) {
             switch (lang) {
                 case "rus":
                     array = getActivity().getResources().getStringArray(R.array.tabs_rus);
@@ -137,9 +146,9 @@ public class ContentFragment extends Fragment {
         mToolbar.setTitle(array[position]);
     }
 
-    public void updateImage(int position){
+    public void updateImage(int position) {
         String imageAddress;
-        switch (position){
+        switch (position) {
             case 0:
                 imageAddress = "file:///android_asset/images_for_article/tashkent_places_amirsquare4.jpg";
                 break;

@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.vladimir.uzbekistanexplorer.Article.ArticleFragment;
+import com.example.vladimir.uzbekistanexplorer.Constants;
 import com.example.vladimir.uzbekistanexplorer.MainActivity;
 import com.example.vladimir.uzbekistanexplorer.R;
 import com.example.vladimir.uzbekistanexplorer.entity.ContentItem;
@@ -19,12 +20,13 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
 
     List<ContentItem> mList = new ArrayList<>();
 
-    public void addAll(ArrayList<ContentItem> arrayList){
+    public void addAll(ArrayList<ContentItem> arrayList) {
         mList.addAll(arrayList);
         notifyDataSetChanged();
     }
@@ -50,6 +52,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                 bundle.putString("IMAGES", mList.get(position).getImages());
                 bundle.putString("DESCRIPTION", mList.get(position).getDescription());
                 bundle.putString("NAME", mList.get(position).getName());
+                bundle.putDouble(Constants.LATITUDE, mList.get(position).getLat());
+                bundle.putDouble(Constants.LONGITUDE, mList.get(position).getLon());
                 ArticleFragment fragment = new ArticleFragment();
                 fragment.setArguments(bundle);
                 activity.changeFragment(fragment);
@@ -64,6 +68,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                 bundle.putString("IMAGES", mList.get(position).getImages());
                 bundle.putString("DESCRIPTION", mList.get(position).getDescription());
                 bundle.putString("NAME", mList.get(position).getName());
+                bundle.putDouble(Constants.LATITUDE, mList.get(position).getLat());
+                bundle.putDouble(Constants.LONGITUDE, mList.get(position).getLon());
                 ArticleFragment fragment = new ArticleFragment();
                 fragment.setArguments(bundle);
                 activity.changeFragment(fragment);
@@ -73,7 +79,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         holder.mAddress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String uri = "geo:0,0?q=" + mList.get(position).getName();
+                String uri;
+                if (mList.get(position).getLat() != 0) {
+                    uri = "geo:0, 0?q=" + mList.get(position).getLat() + " " + mList.get(position).getLon();
+                } else {
+                    uri = "geo:0,0?q=" + mList.get(position).getName();
+                }
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
                 v.getContext().startActivity(intent);
             }
@@ -88,11 +99,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     protected class ViewHolder extends RecyclerView.ViewHolder {
         public TextView mName, mAddress;
         public ImageView mImage;
+
         public ViewHolder(final View itemView) {
             super(itemView);
-            mName = (TextView)itemView.findViewById(R.id.text);
-            mImage = (ImageView)itemView.findViewById(R.id.image);
-            mAddress = (TextView)itemView.findViewById(R.id.address);
+            mName = (TextView) itemView.findViewById(R.id.text);
+            mImage = (ImageView) itemView.findViewById(R.id.image);
+            mAddress = (TextView) itemView.findViewById(R.id.address);
         }
     }
 }

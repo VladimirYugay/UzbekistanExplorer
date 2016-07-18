@@ -46,7 +46,6 @@ public class GalleryItemFragment extends Fragment{
         HackyViewPager viewPager = (HackyViewPager)view.findViewById(R.id.container);
         viewPager.setAdapter(new SectionsPagerAdapter(getChildFragmentManager(), mImages));
         viewPager.setCurrentItem(mPosition);
-//        viewPager.setPageTransformer(false, new DepthPageTransformer());
     }
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter {

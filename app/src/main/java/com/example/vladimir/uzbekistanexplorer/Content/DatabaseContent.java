@@ -21,7 +21,7 @@ public class DatabaseContent extends SQLiteAssetHelper {
         SQLiteDatabase db =  getReadableDatabase();
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
 
-        String[] sqlSelect = {"id", "name", "description", "address", "image", "images"};
+        String[] sqlSelect = {"id", "name", "description", "address", "image", "images", "lat", "lon"};
         qb.setTables(sqlTables);
 
         Cursor cursor = qb.query(db, sqlSelect, null, null, null, null, null);

@@ -76,6 +76,8 @@ public class ContentPagerItem extends Fragment{
                 item.setAddress(names.getString(3));
                 item.setImage(names.getString(4));
                 item.setImages(names.getString(5));
+                item.setLat(names.getDouble(6));
+                item.setLon(names.getDouble(7));
                 arrayList.add(item);
                 names.moveToNext();
             }

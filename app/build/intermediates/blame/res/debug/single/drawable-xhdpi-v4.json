@@ -112,12 +112,12 @@
         "source": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-xhdpi\\intro_lighbulb.png"
     },
     {
-        "merged": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_slide1.png",
-        "source": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-xhdpi\\ic_slide1.png"
-    },
-    {
         "merged": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_slide4.png",
         "source": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-xhdpi\\ic_slide4.png"
+    },
+    {
+        "merged": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_slide1.png",
+        "source": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-xhdpi\\ic_slide1.png"
     },
     {
         "merged": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_015.png",
