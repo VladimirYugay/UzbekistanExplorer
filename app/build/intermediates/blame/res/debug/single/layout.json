@@ -84,12 +84,12 @@
         "source": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\layout\\fragment_content.xml"
     },
     {
-        "merged": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_gallery_detail.xml",
-        "source": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\layout\\fragment_gallery_detail.xml"
-    },
-    {
         "merged": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_recycler_gallery.xml",
         "source": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\layout\\item_recycler_gallery.xml"
+    },
+    {
+        "merged": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_gallery_detail.xml",
+        "source": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\layout\\fragment_gallery_detail.xml"
     },
     {
         "merged": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_intro.xml",
@@ -108,12 +108,12 @@
         "source": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\layout\\design_layout_snackbar_include.xml"
     },
     {
-        "merged": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",
-        "source": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\layout\\design_navigation_item.xml"
-    },
-    {
         "merged": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_recycler_content.xml",
         "source": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\layout\\item_recycler_content.xml"
+    },
+    {
+        "merged": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",
+        "source": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\layout\\design_navigation_item.xml"
     },
     {
         "merged": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\showcase_content.xml",

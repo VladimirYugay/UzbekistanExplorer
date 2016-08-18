@@ -459,9 +459,9 @@ public final class R {
 		public static final int ic_arrow_forward_white_24px = 0x7f020053;
 		public static final int ic_done_white_24px = 0x7f020054;
 		public static final int ic_navigate_next_white_24dp = 0x7f02005c;
-		public static final int indicator_dot_grey = 0x7f020061;
-		public static final int indicator_dot_white = 0x7f020062;
-		public static final int notification_template_icon_bg = 0x7f02007c;
+		public static final int indicator_dot_grey = 0x7f02005d;
+		public static final int indicator_dot_white = 0x7f02005e;
+		public static final int notification_template_icon_bg = 0x7f020073;
 	}
 	public static final class id {
 		public static final int action0 = 0x7f0d00a2;
@@ -651,7 +651,7 @@ public final class R {
 		public static final int library_appintro_libraryWebsite = 0x7f060028;
 		public static final int library_appintro_licenseId = 0x7f060029;
 		public static final int library_appintro_repositoryLink = 0x7f06002a;
-		public static final int skip_button = 0x7f06002e;
+		public static final int skip_button = 0x7f06002f;
 		public static final int status_bar_notification_info_overflow = 0x7f060013;
 	}
 	public static final class style {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.vladimir.uzbekistanexplorer.test" >
+    package="com.uzbekistanexplorer.vladimir.uzbekistanexplorer.test" >
 
     <uses-sdk
         android:minSdkVersion="15"
@@ -10,8 +10,8 @@
         android:name="com.android.test.runner.MultiDexTestRunner"
         android:functionalTest="false"
         android:handleProfiling="false"
-        android:label="Tests for com.example.vladimir.uzbekistanexplorer"
-        android:targetPackage="com.example.vladimir.uzbekistanexplorer" />
+        android:label="Tests for com.uzbekistanexplorer.vladimir.uzbekistanexplorer"
+        android:targetPackage="com.uzbekistanexplorer.vladimir.uzbekistanexplorer" />
 
     <application>
         <uses-library android:name="android.test.runner" />

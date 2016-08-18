@@ -160,10 +160,6 @@
         "source": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-hdpi\\abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_slide3.png",
-        "source": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-hdpi\\ic_slide3.png"
-    },
-    {
         "merged": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\btn_cling_pressed.9.png",
         "source": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.github.amlcurran.showcaseview\\library\\5.4.1\\res\\drawable-hdpi-v4\\btn_cling_pressed.9.png"
     },
@@ -186,10 +182,6 @@
     {
         "merged": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
         "source": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-hdpi\\abc_btn_radio_to_on_mtrl_000.png"
-    },
-    {
-        "merged": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_slide2.png",
-        "source": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-hdpi\\ic_slide2.png"
     },
     {
         "merged": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_rating_star_off_mtrl_alpha.png",
@@ -228,16 +220,8 @@
         "source": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-hdpi\\phrases_museum.png"
     },
     {
-        "merged": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_slide4.png",
-        "source": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-hdpi\\ic_slide4.png"
-    },
-    {
         "merged": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_navigate_next_white_24dp.png",
         "source": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.github.paolorotolo\\appintro\\3.4.0\\res\\drawable-hdpi-v4\\ic_navigate_next_white_24dp.png"
-    },
-    {
-        "merged": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_slide1.png",
-        "source": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\drawable-hdpi\\ic_slide1.png"
     },
     {
         "merged": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\fab_bg_mini.png",
