@@ -113,7 +113,9 @@ public class ArticleFragment extends Fragment {
         ImageView imageView = (ImageView) view.findViewById(R.id.backdrop);
         if (mImages != null) mList = mImages.split(" ");
         else mList = new String[]{"amir_square1", "amir_square1"};
-        String imageAddress = "file:///android_asset/images_for_article/" + mList[1] + ".jpg";
+//        String imageAddress = "file:///android_asset/images_for_article/" + mList[1] + ".jpg";
+        String imageAddress = "http://ec2-52-25-16-250.us-west-2.compute.amazonaws.com/images/" +
+                mList[1] + ".jpg";
         Picasso.with(getContext()).load(imageAddress).into(imageView);
 
         TextView mText = (TextView) view.findViewById(R.id.text);

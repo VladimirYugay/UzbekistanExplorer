@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">UzbekistanExplorer</string>
+    <string name="app_name">Uzbekistan Explorer</string>
     <string name="action_back">Back</string>
     <string name="action_language">Language</string>
     <string name="action_tip">Tips</string>
@@ -138,5 +138,9 @@
         <item>Look through the exclusive gallery of the object</item>
     </string-array>
 
+    <string name="rus_share">ПОДЕЛИТЬСЯ</string>
+    <string name="rus_explore">ОТКРЫТЬ</string>
+    <string name="eng_share">SHARE</string>
+    <string name="eng_explore">EXPLORE</string>
 
 </resources>

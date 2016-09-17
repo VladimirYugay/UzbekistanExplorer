@@ -13,5 +13,9 @@
 
     <color name="divideColor">#B6B6B6</color>
     <color name="white">#FFFFFF</color>
+    <color name="little_white">#E3E2E2</color>
     <color name="transparent">@android:color/transparent</color>
+
+    <color name="material_blue_grey_700">#ff455a64</color>
+    <color name="material_blue_grey_300">#ff8fa4ad</color>
 </resources>

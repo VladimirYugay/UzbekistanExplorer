@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:2:1-22:12
+ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:2:1-23:12
 	package
 		ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:3:5-65
 		INJECTED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml
@@ -13,8 +13,13 @@ ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\s
 	android:versionCode
 		INJECTED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:5:5-66
+MERGED from [com.yandex.android:mobmetricalib:2.42] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.yandex.android\mobmetricalib\2.42\AndroidManifest.xml:13:5-67
+	android:name
+		ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:7:5-20:19
+ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:7:5-21:19
 MERGED from [com.android.support:appcompat-v7:23.1.1] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.1.1] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:23.1.1] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\AndroidManifest.xml:22:5-20
@@ -37,30 +42,36 @@ MERGED from [com.android.support:appcompat-v7:23.1.1] D:\Developing\Projects\And
 MERGED from [com.android.support:support-v4:23.1.1] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.1.1] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.1.1] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.yandex.android:mobmetricalib:2.42] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.yandex.android\mobmetricalib\2.42\AndroidManifest.xml:16:5-48:19
+MERGED from [com.github.johnkil.android-robototextview:robototextview:2.4.1] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.github.johnkil.android-robototextview\robototextview\2.4.1\AndroidManifest.xml:8:5-20
+MERGED from [com.android.support:appcompat-v7:23.1.1] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
 	android:label
-		ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:10:9-41
+		ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:11:9-41
 	android:supportsRtl
-		ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:11:9-35
+		ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:12:9-35
 	android:allowBackup
-		ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:8:9-35
+		ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:9:9-35
 	android:icon
-		ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:9:9-36
+		ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:10:9-36
 	android:theme
-		ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:12:9-40
+		ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:13:9-40
+	android:name
+		ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:8:9-28
 activity#com.uzbekistanexplorer.vladimir.uzbekistanexplorer.MainActivity
-ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:13:9-19:20
+ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:14:9-20:20
 	android:name
-		ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:13:19-97
+		ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:14:19-97
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:14:13-18:29
+ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:15:13-19:29
 action#android.intent.action.MAIN
-ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:15:17-69
+ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:16:17-69
 	android:name
-		ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:15:25-66
+		ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:16:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:17:17-77
+ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:18:17-77
 	android:name
-		ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:17:27-74
+		ADDED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml:18:27-74
 uses-sdk
 INJECTED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:multidex:1.0.1] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\AndroidManifest.xml:18:5-42
@@ -94,6 +105,10 @@ MERGED from [com.android.support:support-v4:23.1.1] D:\Developing\Projects\Andro
 MERGED from [com.github.amlcurran.showcaseview:library:5.4.1] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.github.amlcurran.showcaseview\library\5.4.1\AndroidManifest.xml:22:5-24:41
 MERGED from [com.android.support:support-v4:23.1.1] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:20:5-43
 MERGED from [com.github.deano2390:MaterialShowcaseView:1.1.0] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.github.deano2390\MaterialShowcaseView\1.1.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.yandex.android:mobmetricalib:2.42] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.yandex.android\mobmetricalib\2.42\AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.johnkil.android-robototextview:robototextview:2.4.1] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.github.johnkil.android-robototextview\robototextview\2.4.1\AndroidManifest.xml:6:5-43
+MERGED from [com.android.support:appcompat-v7:23.1.1] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:20:5-43
 	tools:overrideLibrary
 		ADDED from [com.afollestad.material-dialogs:core:0.8.4.2] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.afollestad.material-dialogs\core\0.8.4.2\AndroidManifest.xml:11:9-72
 	android:targetSdkVersion
@@ -102,3 +117,55 @@ MERGED from [com.github.deano2390:MaterialShowcaseView:1.1.0] D:\Developing\Proj
 	android:minSdkVersion
 		INJECTED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.yandex.android:mobmetricalib:2.42] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.yandex.android\mobmetricalib\2.42\AndroidManifest.xml:14:5-79
+	android:name
+		ADDED from [com.yandex.android:mobmetricalib:2.42] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.yandex.android\mobmetricalib\2.42\AndroidManifest.xml:14:22-76
+service#com.yandex.metrica.MetricaService
+ADDED from [com.yandex.android:mobmetricalib:2.42] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.yandex.android\mobmetricalib\2.42\AndroidManifest.xml:19:9-36:19
+	android:enabled
+		ADDED from [com.yandex.android:mobmetricalib:2.42] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.yandex.android\mobmetricalib\2.42\AndroidManifest.xml:21:13-35
+	android:process
+		ADDED from [com.yandex.android:mobmetricalib:2.42] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.yandex.android\mobmetricalib\2.42\AndroidManifest.xml:23:13-39
+	android:exported
+		ADDED from [com.yandex.android:mobmetricalib:2.42] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.yandex.android\mobmetricalib\2.42\AndroidManifest.xml:22:13-36
+	tools:ignore
+		ADDED from [com.yandex.android:mobmetricalib:2.42] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.yandex.android\mobmetricalib\2.42\AndroidManifest.xml:24:13-43
+	android:name
+		ADDED from [com.yandex.android:mobmetricalib:2.42] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.yandex.android\mobmetricalib\2.42\AndroidManifest.xml:20:13-61
+intent-filter#android.intent.category.DEFAULT+com.yandex.metrica.IMetricaService
+ADDED from [com.yandex.android:mobmetricalib:2.42] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.yandex.android\mobmetricalib\2.42\AndroidManifest.xml:25:13-31:29
+category#android.intent.category.DEFAULT
+ADDED from [com.yandex.android:mobmetricalib:2.42] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.yandex.android\mobmetricalib\2.42\AndroidManifest.xml:26:17-76
+	android:name
+		ADDED from [com.yandex.android:mobmetricalib:2.42] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.yandex.android\mobmetricalib\2.42\AndroidManifest.xml:26:27-73
+action#com.yandex.metrica.IMetricaService
+ADDED from [com.yandex.android:mobmetricalib:2.42] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.yandex.android\mobmetricalib\2.42\AndroidManifest.xml:28:17-77
+	android:name
+		ADDED from [com.yandex.android:mobmetricalib:2.42] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.yandex.android\mobmetricalib\2.42\AndroidManifest.xml:28:25-74
+data
+ADDED from [com.yandex.android:mobmetricalib:2.42] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.yandex.android\mobmetricalib\2.42\AndroidManifest.xml:30:17-50
+	android:scheme
+		ADDED from [com.yandex.android:mobmetricalib:2.42] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.yandex.android\mobmetricalib\2.42\AndroidManifest.xml:30:23-47
+meta-data#metrica:api:level
+ADDED from [com.yandex.android:mobmetricalib:2.42] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.yandex.android\mobmetricalib\2.42\AndroidManifest.xml:33:13-35:38
+	android:value
+		ADDED from [com.yandex.android:mobmetricalib:2.42] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.yandex.android\mobmetricalib\2.42\AndroidManifest.xml:35:17-35
+	android:name
+		ADDED from [com.yandex.android:mobmetricalib:2.42] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.yandex.android\mobmetricalib\2.42\AndroidManifest.xml:34:17-49
+receiver#com.yandex.metrica.MetricaEventHandler
+ADDED from [com.yandex.android:mobmetricalib:2.42] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.yandex.android\mobmetricalib\2.42\AndroidManifest.xml:39:9-47:20
+	android:enabled
+		ADDED from [com.yandex.android:mobmetricalib:2.42] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.yandex.android\mobmetricalib\2.42\AndroidManifest.xml:41:13-35
+	android:exported
+		ADDED from [com.yandex.android:mobmetricalib:2.42] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.yandex.android\mobmetricalib\2.42\AndroidManifest.xml:42:13-36
+	tools:ignore
+		ADDED from [com.yandex.android:mobmetricalib:2.42] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.yandex.android\mobmetricalib\2.42\AndroidManifest.xml:43:13-44
+	android:name
+		ADDED from [com.yandex.android:mobmetricalib:2.42] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.yandex.android\mobmetricalib\2.42\AndroidManifest.xml:40:13-66
+intent-filter#com.android.vending.INSTALL_REFERRER
+ADDED from [com.yandex.android:mobmetricalib:2.42] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.yandex.android\mobmetricalib\2.42\AndroidManifest.xml:44:13-46:29
+action#com.android.vending.INSTALL_REFERRER
+ADDED from [com.yandex.android:mobmetricalib:2.42] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.yandex.android\mobmetricalib\2.42\AndroidManifest.xml:45:17-79
+	android:name
+		ADDED from [com.yandex.android:mobmetricalib:2.42] D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\build\intermediates\exploded-aar\com.yandex.android\mobmetricalib\2.42\AndroidManifest.xml:45:25-76

@@ -1,6 +1,8 @@
 package com.uzbekistanexplorer.vladimir.uzbekistanexplorer.Article;
 
 
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -14,9 +16,13 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.load.resource.drawable.GlideDrawable;
+import com.bumptech.glide.request.RequestListener;
+import com.bumptech.glide.request.target.Target;
 import com.uzbekistanexplorer.vladimir.uzbekistanexplorer.MainActivity;
 import com.uzbekistanexplorer.vladimir.uzbekistanexplorer.R;
 
@@ -71,13 +77,29 @@ public class GalleryFragment extends Fragment{
         }
 
         @Override
-        public void onBindViewHolder(ViewHolder holder, final int position) {
-            String imageAddress = "file:///android_asset/images_for_article/" + images[position] + ".jpg";
+        public void onBindViewHolder(final ViewHolder holder, final int position) {
+//            String imageAddress = "file:///android_asset/images_for_article/" + images[position] + ".jpg";
+            String imageAddress = "http://ec2-52-25-16-250.us-west-2.compute.amazonaws.com/images/" +
+                    images[position] + ".jpg";
             Glide.with(getActivity()).load(imageAddress)
-                    .thumbnail(0.5f)
-                    .crossFade()
                     .diskCacheStrategy(DiskCacheStrategy.ALL)
+                    .listener(new RequestListener<String, GlideDrawable>() {
+                        @Override
+                        public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
+                            return false;
+                        }
+
+                        @Override
+                        public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
+                            holder.mProgress.setVisibility(View.GONE);
+                            return false;
+                        }
+                    })
                     .into(holder.mImage);
+
+
+
+
             holder.mImage.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -99,9 +121,11 @@ public class GalleryFragment extends Fragment{
 
         protected class ViewHolder extends RecyclerView.ViewHolder {
             ImageView mImage;
+            ProgressBar mProgress;
             public ViewHolder(View itemView) {
                 super(itemView);
                 mImage = (ImageView)itemView.findViewById(R.id.image);
+                mProgress = (ProgressBar)itemView.findViewById(R.id.progressBar);
             }
         }
     }

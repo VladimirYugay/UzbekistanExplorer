@@ -150,7 +150,7 @@ public class ContentFragment extends Fragment {
         String imageAddress;
         switch (position) {
             case 0:
-                imageAddress = "file:///android_asset/images_for_article/tashkent_places_amirsquare4.jpg";
+                imageAddress = "file:///android_asset/images_for_content/tashkent_places_amirsquare4.jpg";
                 break;
             default:
                 imageAddress = "file:///android_asset/images_for_content/sam_places_bibi10.jpg";

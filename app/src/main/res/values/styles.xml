@@ -48,4 +48,13 @@
         <item name="android:textSize">18sp</item>
     </style>
 
+    <style name="ContentButton" parent="Widget.AppCompat.Button">
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorPrimaryLight</item>
+        <item name="colorButtonNormal">@color/white</item>
+    </style>
+
 </resources>

@@ -9,6 +9,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,7 @@ import com.uzbekistanexplorer.vladimir.uzbekistanexplorer.Constants;
 import com.uzbekistanexplorer.vladimir.uzbekistanexplorer.R;
 import com.uzbekistanexplorer.vladimir.uzbekistanexplorer.entity.ContentItem;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ContentPagerItem extends Fragment{
 
@@ -36,7 +38,7 @@ public class ContentPagerItem extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.recycler, container, false);
+        return inflater.inflate(R.layout.recycler_content, container, false);
     }
 
     @Override

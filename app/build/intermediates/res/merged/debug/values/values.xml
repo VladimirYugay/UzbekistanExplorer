@@ -103,6 +103,11 @@
         <item>Отели</item>
     </string-array>
     <attr format="reference" name="drawerArrowStyle"/>
+    <attr name="fontFamily">
+        <enum name="roboto" value="0"/>
+        <enum name="roboto_condensed" value="1"/>
+        <enum name="roboto_slab" value="2"/>
+    </attr>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>
     <attr format="color" name="md_background_color"/>
@@ -153,7 +158,43 @@
         <enum name="end" value="2"/>
     </attr>
     <attr format="color" name="md_widget_color"/>
+    <attr name="textStyle">
+        <enum name="normal" value="0"/>
+        <enum name="italic" value="1"/>
+    </attr>
+    <attr name="textWeight">
+        <enum name="normal" value="0"/>
+        <enum name="thin" value="1"/>
+        <enum name="light" value="2"/>
+        <enum name="medium" value="3"/>
+        <enum name="bold" value="4"/>
+        <enum name="ultra_bold" value="5"/>
+    </attr>
     <attr format="string" name="title"/>
+    <attr name="typeface">
+        <enum name="roboto_thin" value="0"/>
+        <enum name="roboto_thin_italic" value="1"/>
+        <enum name="roboto_light" value="2"/>
+        <enum name="roboto_light_italic" value="3"/>
+        <enum name="roboto_regular" value="4"/>
+        <enum name="roboto_italic" value="5"/>
+        <enum name="roboto_medium" value="6"/>
+        <enum name="roboto_medium_italic" value="7"/>
+        <enum name="roboto_bold" value="8"/>
+        <enum name="roboto_bold_italic" value="9"/>
+        <enum name="roboto_black" value="10"/>
+        <enum name="roboto_black_italic" value="11"/>
+        <enum name="roboto_condensed_light" value="12"/>
+        <enum name="roboto_condensed_light_italic" value="13"/>
+        <enum name="roboto_condensed_regular" value="14"/>
+        <enum name="roboto_condensed_italic" value="15"/>
+        <enum name="roboto_condensed_bold" value="16"/>
+        <enum name="roboto_condensed_bold_italic" value="17"/>
+        <enum name="roboto_slab_thin" value="18"/>
+        <enum name="roboto_slab_light" value="19"/>
+        <enum name="roboto_slab_regular" value="20"/>
+        <enum name="roboto_slab_bold" value="21"/>
+    </attr>
     <bool name="abc_action_bar_embed_tabs">true</bool>
     <bool name="abc_action_bar_embed_tabs_pre_jb">false</bool>
     <bool name="abc_action_bar_expanded_action_views_exclusive">true</bool>
@@ -210,6 +251,9 @@
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="hint_foreground_material_dark">@color/bright_foreground_disabled_material_dark</color>
     <color name="hint_foreground_material_light">@color/bright_foreground_disabled_material_light</color>
+    <color name="little_white">#E3E2E2</color>
+    <color name="material_blue_grey_300">#ff8fa4ad</color>
+    <color name="material_blue_grey_700">#ff455a64</color>
     <color name="material_blue_grey_800">#ff37474f</color>
     <color name="material_blue_grey_900">#ff263238</color>
     <color name="material_blue_grey_950">#ff21272b</color>
@@ -286,6 +330,21 @@
     <declare-styleable name="PopupWindow"><attr format="boolean" name="overlapAnchor"/><attr name="android:popupBackground"/></declare-styleable>
     <declare-styleable name="PopupWindowBackgroundState"><attr format="boolean" name="state_above_anchor"/></declare-styleable>
     <declare-styleable name="RecyclerView"><attr format="string" name="layoutManager"/><attr name="android:orientation"/><attr format="integer" name="spanCount"/><attr format="boolean" name="reverseLayout"/><attr format="boolean" name="stackFromEnd"/></declare-styleable>
+    <declare-styleable name="RobotoAutoCompleteTextView"><attr name="typeface"/><attr name="fontFamily"/><attr name="textWeight"/><attr name="textStyle"/></declare-styleable>
+    <declare-styleable name="RobotoButton"><attr name="typeface"/><attr name="fontFamily"/><attr name="textWeight"/><attr name="textStyle"/></declare-styleable>
+    <declare-styleable name="RobotoCheckBox"><attr name="typeface"/><attr name="fontFamily"/><attr name="textWeight"/><attr name="textStyle"/></declare-styleable>
+    <declare-styleable name="RobotoCheckedTextView"><attr name="typeface"/><attr name="fontFamily"/><attr name="textWeight"/><attr name="textStyle"/></declare-styleable>
+    <declare-styleable name="RobotoChronometer"><attr name="typeface"/><attr name="fontFamily"/><attr name="textWeight"/><attr name="textStyle"/></declare-styleable>
+    <declare-styleable name="RobotoCompoundButton"><attr name="typeface"/><attr name="fontFamily"/><attr name="textWeight"/><attr name="textStyle"/></declare-styleable>
+    <declare-styleable name="RobotoDigitalClock"><attr name="typeface"/><attr name="fontFamily"/><attr name="textWeight"/><attr name="textStyle"/></declare-styleable>
+    <declare-styleable name="RobotoEditText"><attr name="typeface"/><attr name="fontFamily"/><attr name="textWeight"/><attr name="textStyle"/></declare-styleable>
+    <declare-styleable name="RobotoExtractEditText"><attr name="typeface"/><attr name="fontFamily"/><attr name="textWeight"/><attr name="textStyle"/></declare-styleable>
+    <declare-styleable name="RobotoMultiAutoCompleteTextView"><attr name="typeface"/><attr name="fontFamily"/><attr name="textWeight"/><attr name="textStyle"/></declare-styleable>
+    <declare-styleable name="RobotoRadioButton"><attr name="typeface"/><attr name="fontFamily"/><attr name="textWeight"/><attr name="textStyle"/></declare-styleable>
+    <declare-styleable name="RobotoSwitch"><attr name="typeface"/><attr name="fontFamily"/><attr name="textWeight"/><attr name="textStyle"/></declare-styleable>
+    <declare-styleable name="RobotoTextClock"><attr name="typeface"/><attr name="fontFamily"/><attr name="textWeight"/><attr name="textStyle"/></declare-styleable>
+    <declare-styleable name="RobotoTextView"><attr name="typeface"/><attr name="fontFamily"/><attr name="textWeight"/><attr name="textStyle"/></declare-styleable>
+    <declare-styleable name="RobotoToggleButton"><attr name="typeface"/><attr name="fontFamily"/><attr name="textWeight"/><attr name="textStyle"/></declare-styleable>
     <declare-styleable name="ScrimInsetsFrameLayout"><attr format="color|reference" name="insetForeground"/></declare-styleable>
     <declare-styleable name="ScrollingViewBehavior_Params"><attr format="dimension" name="behavior_overlapTop"/></declare-styleable>
     <declare-styleable name="SearchView"><attr format="reference" name="layout"/><attr format="boolean" name="iconifiedByDefault"/><attr name="android:maxWidth"/><attr format="string" name="queryHint"/><attr format="string" name="defaultQueryHint"/><attr name="android:imeOptions"/><attr name="android:inputType"/><attr format="reference" name="closeIcon"/><attr format="reference" name="goIcon"/><attr format="reference" name="searchIcon"/><attr format="reference" name="searchHintIcon"/><attr format="reference" name="voiceIcon"/><attr format="reference" name="commitIcon"/><attr format="reference" name="suggestionRowLayout"/><attr format="reference" name="queryBackground"/><attr format="reference" name="submitBackground"/><attr name="android:focusable"/></declare-styleable>
@@ -511,14 +570,16 @@
     <string name="action_language">Language</string>
     <string name="action_map">Location</string>
     <string name="action_tip">Tips</string>
-    <string name="app_name">UzbekistanExplorer</string>
+    <string name="app_name">Uzbekistan Explorer</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="define_appintro"/>
     <string name="dialog_eng">Choose the language</string>
     <string name="dialog_rus">Выберите язык</string>
     <string name="done_button">DONE</string>
+    <string name="eng_explore">EXPLORE</string>
     <string name="eng_phrasebook">Phrasebook</string>
+    <string name="eng_share">SHARE</string>
     <string name="eng_tips">Hints</string>
     <string name="library_appintro_author">Paolo Rotolo</string>
     <string name="library_appintro_authorWebsite">http://paolorotolo.github.io/</string>
@@ -532,7 +593,9 @@
     <string name="library_appintro_repositoryLink">https://github.com/PaoloRotolo/AppIntro</string>
     <string name="missing_google_maps">You need Google Maps to open this location</string>
     <string name="ok">OK</string>
+    <string name="rus_explore">ОТКРЫТЬ</string>
     <string name="rus_phrasebook">Разговорник</string>
+    <string name="rus_share">ПОДЕЛИТЬСЯ</string>
     <string name="rus_tips">Подсказки</string>
     <string name="skip_button">SKIP</string>
     <string name="status_bar_notification_info_overflow">999+</string>
@@ -1507,6 +1570,14 @@
     </style>
     <style name="CardView.Light">
         <item name="cardBackgroundColor">@color/cardview_light_background</item>
+    </style>
+    <style name="ContentButton" parent="Widget.AppCompat.Button">
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorPrimaryLight</item>
+        <item name="colorButtonNormal">@color/white</item>
     </style>
     <style name="CustomShowcaseTheme" parent="ShowcaseView.Light">
         <item name="sv_backgroundColor">@color/colorPrimaryTransparent</item>

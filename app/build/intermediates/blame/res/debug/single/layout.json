@@ -84,12 +84,12 @@
         "source": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\layout\\fragment_content.xml"
     },
     {
-        "merged": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_recycler_gallery.xml",
-        "source": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\layout\\item_recycler_gallery.xml"
-    },
-    {
         "merged": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_gallery_detail.xml",
         "source": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\layout\\fragment_gallery_detail.xml"
+    },
+    {
+        "merged": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_recycler_gallery.xml",
+        "source": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\layout\\item_recycler_gallery.xml"
     },
     {
         "merged": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_intro.xml",
@@ -350,5 +350,9 @@
     {
         "merged": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\handy.xml",
         "source": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\exploded-aar\\com.github.amlcurran.showcaseview\\library\\5.4.1\\res\\layout\\handy.xml"
+    },
+    {
+        "merged": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\recycler_content.xml",
+        "source": "D:\\Developing\\Projects\\AndroidStudioProjects\\UzbekistanExplorer\\app\\src\\main\\res\\layout\\recycler_content.xml"
     }
 ]
