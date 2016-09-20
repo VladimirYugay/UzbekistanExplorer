@@ -578,7 +578,10 @@
     <string name="dialog_rus">Выберите язык</string>
     <string name="done_button">DONE</string>
     <string name="eng_explore">EXPLORE</string>
+    <string name="eng_hotels">Hotels</string>
     <string name="eng_phrasebook">Phrasebook</string>
+    <string name="eng_places">Sights</string>
+    <string name="eng_restaurants">Restaurants</string>
     <string name="eng_share">SHARE</string>
     <string name="eng_tips">Hints</string>
     <string name="library_appintro_author">Paolo Rotolo</string>
@@ -594,7 +597,10 @@
     <string name="missing_google_maps">You need Google Maps to open this location</string>
     <string name="ok">OK</string>
     <string name="rus_explore">ОТКРЫТЬ</string>
+    <string name="rus_hotels">Отели</string>
     <string name="rus_phrasebook">Разговорник</string>
+    <string name="rus_places">Достопримечательности</string>
+    <string name="rus_restaurants">Рестораны</string>
     <string name="rus_share">ПОДЕЛИТЬСЯ</string>
     <string name="rus_tips">Подсказки</string>
     <string name="skip_button">SKIP</string>

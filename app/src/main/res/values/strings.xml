@@ -143,4 +143,11 @@
     <string name="eng_share">SHARE</string>
     <string name="eng_explore">EXPLORE</string>
 
+    <string name="rus_places">Достопримечательности</string>
+    <string name="rus_restaurants">Рестораны</string>
+    <string name="rus_hotels">Отели</string>
+    <string name="eng_places">Sights</string>
+    <string name="eng_restaurants">Restaurants</string>
+    <string name="eng_hotels">Hotels</string>
+
 </resources>

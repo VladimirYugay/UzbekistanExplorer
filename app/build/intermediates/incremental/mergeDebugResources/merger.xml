@@ -1687,10 +1687,10 @@
         <item>Hints</item>
         <item>Phrasebook</item>
         <item>City</item>
-    </string-array><string name="rus_share">ПОДЕЛИТЬСЯ</string><string-array name="languages_codes">
+    </string-array><string name="rus_restaurants">Рестораны</string><string name="rus_share">ПОДЕЛИТЬСЯ</string><string-array name="languages_codes">
         <item>rus</item>
         <item>eng</item>
-    </string-array><string name="eng_share">SHARE</string><string name="rus_tips">Подсказки</string><string name="title_activity_intro">IntroActivity</string><string-array name="rus_intro_description">
+    </string-array><string name="eng_places">Sights</string><string name="eng_share">SHARE</string><string name="rus_tips">Подсказки</string><string name="title_activity_intro">IntroActivity</string><string-array name="rus_intro_description">
         <item>Выберите язык из предложенного списка</item>
         <item>Используйте опыт местных жителей и туристов со всего света</item>
         <item>Общайтесь без границ с обширным разговорником для всех жизненных ситуаций</item>
@@ -1708,7 +1708,7 @@
         <item>Подсказки</item>
         <item>Разговорник</item>
         <item>Город</item>
-    </string-array><string-array name="eng_article_title">
+    </string-array><string name="eng_restaurants">Restaurants</string><string-array name="eng_article_title">
         <item>Maps</item>
         <item>Gallery</item>
     </string-array><string name="rus_explore">ОТКРЫТЬ</string><string name="eng_phrasebook">Phrasebook</string><string name="app_name">Uzbekistan Explorer</string><string name="title_activity_content">ContentActivity</string><string name="eng_tips">Hints</string><string-array name="tabs_rus">
@@ -1723,12 +1723,12 @@
     </string-array><string-array name="rus_article_title">
         <item>Карты</item>
         <item>Галерея</item>
-    </string-array><string name="dialog_eng">Choose the language</string><string name="action_map">Location</string><string name="action_tip">Tips</string><string name="missing_google_maps">You need Google Maps to open this location</string><string-array name="eng_intro_description">
+    </string-array><string name="dialog_eng">Choose the language</string><string name="action_map">Location</string><string name="action_tip">Tips</string><string name="eng_hotels">Hotels</string><string name="missing_google_maps">You need Google Maps to open this location</string><string-array name="eng_intro_description">
         <item>Choose the language from the list</item>
         <item>Use the experience from insiders and tourists from all over the world</item>
         <item>Use the capacious phrasebook for all life situations</item>
         <item>Explore the amazing places of the city</item>
-    </string-array><string-array name="rus_places">
+    </string-array><string name="rus_hotels">Отели</string><string-array name="rus_places">
         <item>Общие</item>
         <item>В отеле</item>
         <item>В магазине</item>
@@ -1752,7 +1752,7 @@
         <item>Samarkand</item>
         <item>Bukhara</item>
         <item>Samarkand</item>
-    </string-array></file><file path="D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    </string-array><string name="rus_places">Достопримечательности</string></file><file path="D:\Developing\Projects\AndroidStudioProjects\UzbekistanExplorer\app\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>

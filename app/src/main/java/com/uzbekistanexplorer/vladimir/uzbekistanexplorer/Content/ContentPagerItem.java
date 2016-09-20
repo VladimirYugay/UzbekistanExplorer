@@ -26,6 +26,7 @@ public class ContentPagerItem extends Fragment{
     String mCity;
     String mPrefix;
     RecyclerAdapter mAdapter;
+    int mFragmentType;
 
 
     public ContentPagerItem(){}
@@ -48,6 +49,7 @@ public class ContentPagerItem extends Fragment{
         SharedPreferences mPreferences = getActivity().getSharedPreferences(Constants.APP_SETTINGS, Context.MODE_PRIVATE);
         mPrefix = getArguments().getString(Constants.PREFIX);
         mCity = getArguments().getString(Constants.CITY);
+        mFragmentType = getArguments().getInt(Constants.FRAGMENT_TYPE);
         mLanguage = mPreferences.getString(Constants.LANGUAGE, null);
 
         RecyclerView mRecycler = (RecyclerView)view.findViewById(R.id.recycler);
@@ -98,5 +100,4 @@ public class ContentPagerItem extends Fragment{
             mAdapter.addAll(arrayList);
         }
     }
-
 }

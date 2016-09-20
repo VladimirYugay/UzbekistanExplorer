@@ -102,6 +102,7 @@ public class ContentFragment extends Fragment {
         String[] array = getActivity().getResources().getStringArray(R.array.codes_activities);
         for (int i = 0; i < 3; i++) {
             Bundle bundle = new Bundle();
+            bundle.putInt(Constants.FRAGMENT_TYPE, i);
             bundle.putString(Constants.CITY, mCity);
             bundle.putString(Constants.PREFIX, array[i]);
             ContentPagerItem fragment = new ContentPagerItem();
@@ -123,12 +124,8 @@ public class ContentFragment extends Fragment {
         switch (i) {
             case 0:
                 return "tashkent";
-            case 1:
-                return "samarkand";
-            case 2:
-                return "buxara";
             default:
-                return "xiva";
+                return "samarkand";
         }
     }
 
