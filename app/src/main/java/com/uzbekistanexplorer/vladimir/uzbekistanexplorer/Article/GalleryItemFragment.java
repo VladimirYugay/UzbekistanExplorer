@@ -99,8 +99,7 @@ public class GalleryItemFragment extends Fragment{
         public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
             super.onViewCreated(view, savedInstanceState);
 //            final String imageAddress = "file:///android_asset/images_for_article/" + url + ".jpg";
-            final String imageAddress = "http://ec2-52-25-16-250.us-west-2.compute.amazonaws.com/images/"
-                    + url + ".jpg";
+            final String imageAddress = "http://vladimiryugay.square7.ch/UzbekistanExplorer/" + url + ".jpg";
             PhotoView imageView = (PhotoView)view.findViewById(R.id.imageView);
             final ProgressBar progressBar = (ProgressBar)view.findViewById(R.id.progressBar);
             progressBar.getIndeterminateDrawable().setColorFilter(Color.WHITE, PorterDuff.Mode.MULTIPLY);

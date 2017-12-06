@@ -79,8 +79,7 @@ public class GalleryFragment extends Fragment{
         @Override
         public void onBindViewHolder(final ViewHolder holder, final int position) {
 //            String imageAddress = "file:///android_asset/images_for_article/" + images[position] + ".jpg";
-            String imageAddress = "http://ec2-52-25-16-250.us-west-2.compute.amazonaws.com/images/" +
-                    images[position] + ".jpg";
+            String imageAddress = "http://vladimiryugay.square7.ch/UzbekistanExplorer/" + images[position] + ".jpg";
             Glide.with(getActivity()).load(imageAddress)
                     .diskCacheStrategy(DiskCacheStrategy.ALL)
                     .listener(new RequestListener<String, GlideDrawable>() {

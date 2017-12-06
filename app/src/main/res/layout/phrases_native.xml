@@ -1,42 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     card_view:cardCornerRadius="4dp"
     card_view:cardUseCompatPadding="true">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        style="@android:style/TextAppearance.DeviceDefault.Medium.Inverse"
-        android:textColor="@color/primaryText"
-        android:padding="8dp"
-        android:id="@+id/uzbek"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/article_text_size"/>
+        <TextView
+            android:id="@+id/russian"
+            style="@android:style/TextAppearance.DeviceDefault.Medium.Inverse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primaryText"
+            android:padding="8dp" />
 
-    <TextView
-        style="@android:style/TextAppearance.DeviceDefault.Medium.Inverse"
-        android:padding="8dp"
-        android:id="@+id/russian"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/primaryText"
-        android:textSize="@dimen/article_text_size"/>
+        <TextView
+            android:id="@+id/russian_trans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textColor="@color/secondaryText"
+            android:textSize="@dimen/article_text_size" />
 
-    <TextView
-        android:padding="8dp"
-        android:id="@+id/russian_trans"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/secondaryText"
-        android:textSize="@dimen/article_text_size"/>
+        <TextView
+            android:id="@+id/uzbek"
+            style="@android:style/TextAppearance.DeviceDefault.Medium.Inverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textColor="@color/primaryText"
+            android:textSize="@dimen/article_text_size" />
+
+        <ImageView
+            android:background="@color/colorPrimary"
+            android:id="@+id/play_audio"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_play_circle_filled_white_24dp"
+            android:layout_gravity="center"
+            android:scaleType="center"
+            />
 
     </LinearLayout>
 

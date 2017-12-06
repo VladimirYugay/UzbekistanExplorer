@@ -12,6 +12,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
 import android.text.Layout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -114,8 +115,7 @@ public class ArticleFragment extends Fragment {
         if (mImages != null) mList = mImages.split(" ");
         else mList = new String[]{"amir_square1", "amir_square1"};
 //        String imageAddress = "file:///android_asset/images_for_article/" + mList[1] + ".jpg";
-        String imageAddress = "http://ec2-52-25-16-250.us-west-2.compute.amazonaws.com/images/" +
-                mList[1] + ".jpg";
+        String imageAddress = "http://vladimiryugay.square7.ch/UzbekistanExplorer/" + mList[1] + ".jpg";
         Picasso.with(getContext()).load(imageAddress).into(imageView);
 
         TextView mText = (TextView) view.findViewById(R.id.text);

@@ -6,14 +6,17 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteQueryBuilder;
 
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
+import com.uzbekistanexplorer.vladimir.uzbekistanexplorer.BuildConfig;
 
 public class DatabaseContent extends SQLiteAssetHelper {
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 6;
 
     String sqlTables = "tashkent_rus";
 
-    public DatabaseContent(Context context, String dbPrefix, String city, String current_lang) {
+    public DatabaseContent(Context context, String
+            dbPrefix, String city, String current_lang) {
         super(context, city + ".db", null, DATABASE_VERSION);
+        setForcedUpgrade();
         this.sqlTables = dbPrefix + city + "_" + current_lang;
     }
 

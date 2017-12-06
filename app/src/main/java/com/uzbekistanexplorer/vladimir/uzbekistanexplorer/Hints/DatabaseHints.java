@@ -9,11 +9,12 @@ import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 
 public class DatabaseHints extends SQLiteAssetHelper {
     private static final  String DATABASE_NAME = "tips.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 6;
 
     String sqlTables = "";
     public DatabaseHints(FragmentActivity context, String tableName) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        setForcedUpgrade();
         sqlTables = tableName;
     }
 

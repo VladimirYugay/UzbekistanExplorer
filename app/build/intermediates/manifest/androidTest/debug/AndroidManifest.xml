@@ -4,7 +4,7 @@
 
     <uses-sdk
         android:minSdkVersion="15"
-        android:targetSdkVersion="23" />
+        android:targetSdkVersion="25" />
 
     <instrumentation
         android:name="com.android.test.runner.MultiDexTestRunner"
@@ -13,7 +13,7 @@
         android:label="Tests for com.uzbekistanexplorer.vladimir.uzbekistanexplorer"
         android:targetPackage="com.uzbekistanexplorer.vladimir.uzbekistanexplorer" />
 
-    <application>
+    <application android:debuggable="true" >
         <uses-library android:name="android.test.runner" />
     </application>
 
